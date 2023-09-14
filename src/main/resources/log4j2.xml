@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="logPath">logs/${date:yyyy}/${date:MM} - ${date:MMM}/${date:dd}</Property>
+        <Property name="rollingFileName">fx_log</Property>
+    </Properties>
+    <Appenders>
+        <Console name="console" target="SYSTEMOUT">
+            <PatternLayout
+                    disableAnsi="false"
+                    pattern="%highlight{[%-5level] %d{HH:mm:ss.SSS} %c{1}.%M()}{FATAL=red blink, ERROR=red bold, WARN=yellow bold, INFO=cyan, DEBUG=green, TRACE=blue} %blue{- [%msg] %n}"/>
+        </Console>
+        <RollingFile name="rollingFile" fileName="${logPath}/${rollingFileName}.log"
+                     filePattern="${logPath}/${rollingFileName}%d{yyyy-MM-dd}.log">
+            <PatternLayout
+                    pattern="[%highlight{%-5level}] %d{DEFAULT} %c{1}.%M() - %msg%n%throwable{short.lineNumber}"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="20 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="4"/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="DEBUG" additivity="false">
+            <AppenderRef ref="console"/>
+            <AppenderRef ref="rollingFile"/>
+        </Root>
+    </Loggers>
+</Configuration>
