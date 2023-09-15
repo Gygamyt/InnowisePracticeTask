@@ -26,6 +26,7 @@ public class Driver implements CustomLogger {
     }
 
     public static void quitWebDriver() {
+        localStorage.get().close();
         localStorage.get().quit();
         staticLogger.info("quit from browser");
         localStorage.remove();
@@ -50,5 +51,9 @@ public class Driver implements CustomLogger {
                 .manage()
                 .timeouts()
                 .implicitlyWait(Duration.ofSeconds(5));
+    }
+
+    public static void openLink(String link) {
+        Driver.getDriver().get(link);
     }
 }

@@ -1,16 +1,18 @@
-package com.innowise.innowise_practice.pageobjects;
+package com.innowise.innowise_practice.pageobjects.google_page_objects;
 
-import com.innowise.innowise_practice.BasePage;
+import com.innowise.innowise_practice.pageobjects.BasePage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class GooglePageObject extends BasePage {
 
     public GooglePageObject(WebDriver driver) {
         super(driver);
     }
+
+    private static final By TEXT_FIELD_PATTERN = By.xpath("//span[contains(@lang, '%s')]"); //надо доделать
 
     @FindBy(id = "i12")
     private WebElement leftEnglishButton;
@@ -40,17 +42,15 @@ public class GooglePageObject extends BasePage {
     }
 
     public GooglePageObject clickOnFieldAndEnterText(String textForTranslate) {
-        waiter.until(ExpectedConditions.elementToBeClickable(fieldForEnglishText));
+        moveToElementAndClick(fieldForEnglishText);
         actions
-                .moveToElement(fieldForEnglishText)
-                .click()
                 .sendKeys(textForTranslate)
                 .perform();
         return this;
     }
 
     public GooglePageObject clickRussianLanguageRightButtonWhenExpanded() {
-        clickElement(russianLanguageRightButtonWhenExpanded);
+        moveToElementAndClick(russianLanguageRightButtonWhenExpanded);
         return this;
     }
 

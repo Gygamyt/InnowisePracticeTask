@@ -1,5 +1,6 @@
-package com.innowise.innowise_practice;
+package com.innowise.innowise_practice.pageobjects;
 
+import com.innowise.innowise_practice.CustomLogger;
 import com.innowise.innowise_practice.driver.Driver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -31,7 +32,27 @@ public abstract class BasePage implements CustomLogger {
     }
 
     public static void clickElement(WebElement element) {
-        waiter.until(ExpectedConditions.elementToBeClickable(element)).click();
-        staticLogger.info("'{}' is clicked", element); //получается некрасиво :с
+        waitUntilClickable(element);
+        element.click();
+        staticLogger.info("'{}' is clicked", element); //РїРѕР»СѓС‡Р°РµС‚СЃСЏ РЅРµРєСЂР°СЃРёРІРѕ :СЃ
+    }
+
+    public static void moveToElementAndClick(WebElement element) {
+        waitUntilClickable(element);
+        actions
+                .moveToElement(element)
+                .click(element)
+                .perform();
+        staticLogger.info("moved to '{}' and clicked", element);
+    }
+
+    public static void enterText(WebElement element, String text) {
+//        waitUntilClickable(element);
+//        element.click();
+        element.sendKeys(text);
+    }
+
+    private static void waitUntilClickable(WebElement element) {
+        waiter.until(ExpectedConditions.elementToBeClickable(element));
     }
 }
