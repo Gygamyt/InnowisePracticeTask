@@ -8,6 +8,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class OnlinerTests extends BaseTest {
 
     private static final WebDriver driver = Driver.getDriver();
@@ -18,12 +20,26 @@ public class OnlinerTests extends BaseTest {
 
     private static final String request = "Смартфон Samsung Galaxy A52 SM-A525F/DS 4GB/128GB (черный)";
 
+    private static final String requestedProductLink = "https://catalog.onliner.by/mobile/samsung/sma525fzkdser";
+
     @Test
     public void searchTest() {
         Driver.openLink(LinksForTestsEnum.ONLINER.getLink());
         mainPageOnliner
                 .clickOnSearchFieldAndEnterText(request)
                 .openSearchResult();
-        Assertions.assertEquals(resultProductPage.getProductResultTittleText(), request);
+        assertEquals(Driver.getDriver().getCurrentUrl(), "https://catalog.onliner.by/mobile/samsung/sma525fzkdser");
+    }
+
+    @Test
+    public void addingTheProductToCartTest() {
+        Driver.openLink(LinksForTestsEnum.ONLINER.getLink());
+        mainPageOnliner
+                .clickOnSearchFieldAndEnterText(request)
+                .openSearchResult();
+        Assertions.assertAll(
+                () -> assertEquals(resultProductPage.getProductResultTittleText(), request),
+                () -> assertEquals(resultProductPage.getSelectedItemText(), "Описание и фото")
+        );
     }
 }

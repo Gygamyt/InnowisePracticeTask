@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f69f4030-50b3-4bbf-9f69-682c0bc705a8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/onliner_page_objects/MainPageOnlinerObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/onliner_page_objects/ResultProductPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/OnlinerTests.java" afterDir="false" />
+    <list default="true" id="f69f4030-50b3-4bbf-9f69-682c0bc705a8" name="Changes" comment="google test done, onliner started, multiple instances of browser is fixed">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/onliner_page_objects/util/ProductPOJO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/utils/NumbersParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/driver/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/driver/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/GooglePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/google_page_objects/GooglePageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/GoogleTranslateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/GoogleTranslateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/onliner_page_objects/ResultProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/onliner_page_objects/ResultProductPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/OnlinerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/OnlinerTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +73,7 @@
       <command value="gradle clean test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.OnlinerTests.searchTest">
+  <component name="RunManager" selected="Gradle.OnlinerTests.addingTheProductToCartTest">
     <configuration name="GoogleTranslateTest.cxvzxcv" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -124,7 +122,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="GoogleTranslateTest.test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OnlinerTests.addingTheProductToCartTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -137,7 +135,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.innowise.innowise_practice.GoogleTranslateTest.test&quot;" />
+            <option value="&quot;com.innowise.innowise_practice.OnlinerTests.addingTheProductToCartTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -197,11 +195,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.OnlinerTests.addingTheProductToCartTest" />
         <item itemvalue="Gradle.OnlinerTests.searchTest" />
         <item itemvalue="Gradle.GoogleTranslateTest.googleTranslateTest" />
         <item itemvalue="Gradle.innowise_practice [clean test]" />
         <item itemvalue="Gradle.GoogleTranslateTest.cxvzxcv" />
-        <item itemvalue="Gradle.GoogleTranslateTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -216,11 +214,25 @@
       <workItem from="1694673230669" duration="4226000" />
       <workItem from="1694694372617" duration="7679000" />
       <workItem from="1694765497893" duration="3232000" />
-      <workItem from="1694772119389" duration="5251000" />
+      <workItem from="1694772119389" duration="11036000" />
+      <workItem from="1694854919262" duration="6416000" />
+      <workItem from="1695017833903" duration="836000" />
     </task>
+    <task id="LOCAL-00001" summary="google test done, onliner started, multiple instances of browser is fixed">
+      <created>1694783575907</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694783575907</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="google test done, onliner started, multiple instances of browser is fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="google test done, onliner started, multiple instances of browser is fixed" />
   </component>
 </project>
