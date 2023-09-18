@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f69f4030-50b3-4bbf-9f69-682c0bc705a8" name="Changes" comment="google test done, onliner started, multiple instances of browser is fixed">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/onliner_page_objects/util/ProductPOJO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/utils/NumbersParser.java" afterDir="false" />
+    <list default="true" id="f69f4030-50b3-4bbf-9f69-682c0bc705a8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/amazon/AmazonCartPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/amazon/AmazonHeader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/amazon/AmazonLoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/amazon/AmazonMainPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/amazon/AmazonProductPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/amazon/AmazonProductsSearchPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/utils/LogsAndPasses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/AmazonTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/onliner_page_objects/ResultProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/onliner_page_objects/ResultProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/OnlinerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/OnlinerTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +31,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -39,23 +45,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;W:/Innowise_Practice/innowise_practice/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "W:/Innowise_Practice/innowise_practice/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "File.Encoding",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="W:\Innowise_Practice\innowise_practice\src\main\resources" />
@@ -73,8 +80,8 @@
       <command value="gradle clean test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.OnlinerTests.addingTheProductToCartTest">
-    <configuration name="GoogleTranslateTest.cxvzxcv" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.AmazonTest.cartCheck">
+    <configuration name="AmazonTest.addingToCartTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -87,7 +94,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.innowise.innowise_practice.GoogleTranslateTest.cxvzxcv&quot;" />
+            <option value="&quot;com.innowise.innowise_practice.AmazonTest.addingToCartTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -98,7 +105,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="GoogleTranslateTest.googleTranslateTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AmazonTest.cartCheck" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -111,7 +118,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.innowise.innowise_practice.GoogleTranslateTest.googleTranslateTest&quot;" />
+            <option value="&quot;com.innowise.innowise_practice.AmazonTest.cartCheck&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -122,7 +129,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="OnlinerTests.addingTheProductToCartTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AmazonTest.openAmazon" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -135,7 +142,31 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.innowise.innowise_practice.OnlinerTests.addingTheProductToCartTest&quot;" />
+            <option value="&quot;com.innowise.innowise_practice.AmazonTest.openAmazon&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="AmazonTest.searchTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.innowise.innowise_practice.AmazonTest.searchTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -170,36 +201,13 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="innowise_practice [clean test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-            <option value="test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.OnlinerTests.addingTheProductToCartTest" />
+        <item itemvalue="Gradle.AmazonTest.cartCheck" />
+        <item itemvalue="Gradle.AmazonTest.addingToCartTest" />
+        <item itemvalue="Gradle.AmazonTest.searchTest" />
+        <item itemvalue="Gradle.AmazonTest.openAmazon" />
         <item itemvalue="Gradle.OnlinerTests.searchTest" />
-        <item itemvalue="Gradle.GoogleTranslateTest.googleTranslateTest" />
-        <item itemvalue="Gradle.innowise_practice [clean test]" />
-        <item itemvalue="Gradle.GoogleTranslateTest.cxvzxcv" />
       </list>
     </recent_temporary>
   </component>
@@ -214,25 +222,12 @@
       <workItem from="1694673230669" duration="4226000" />
       <workItem from="1694694372617" duration="7679000" />
       <workItem from="1694765497893" duration="3232000" />
-      <workItem from="1694772119389" duration="11036000" />
-      <workItem from="1694854919262" duration="6416000" />
-      <workItem from="1695017833903" duration="836000" />
+      <workItem from="1694772119389" duration="5251000" />
+      <workItem from="1695024409237" duration="13090000" />
     </task>
-    <task id="LOCAL-00001" summary="google test done, onliner started, multiple instances of browser is fixed">
-      <created>1694783575907</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1694783575907</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="google test done, onliner started, multiple instances of browser is fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="google test done, onliner started, multiple instances of browser is fixed" />
   </component>
 </project>

@@ -64,4 +64,8 @@ public abstract class BasePage implements CustomLogger {
         List<WebElement> webElementArrayList;
         return webElementArrayList = Driver.getDriver().findElements(By.xpath(xpath));
     }
+
+    public static By formatStringForXPath(String pattern, String text) {
+        return By.xpath(String.format(pattern, text));
+    }
 }
