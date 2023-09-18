@@ -3,11 +3,9 @@ package com.innowise.innowise_practice.pageobjects.amazon;
 import com.innowise.innowise_practice.driver.Driver;
 import com.innowise.innowise_practice.pageobjects.BasePage;
 import com.innowise.innowise_practice.utils.LogsAndPasses;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class AmazonLoginPage extends BasePage {
     public AmazonLoginPage(WebDriver driver) {
