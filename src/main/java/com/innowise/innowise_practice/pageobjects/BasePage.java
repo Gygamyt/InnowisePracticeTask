@@ -2,6 +2,7 @@ package com.innowise.innowise_practice.pageobjects;
 
 import com.innowise.innowise_practice.CustomLogger;
 import com.innowise.innowise_practice.driver.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -54,5 +55,9 @@ public abstract class BasePage implements CustomLogger {
 
     private static void waitUntilClickable(WebElement element) {
         waiter.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public static By formatStringForXPath(String pattern, String text) {
+        return By.xpath(String.format(pattern, text));
     }
 }
