@@ -4,20 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f69f4030-50b3-4bbf-9f69-682c0bc705a8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/relax_by_page_objects/LunabarPageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/relax_by_page_objects/RelaxHeader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/relax_by_page_objects/RestaurantsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/RelaxTests.java" afterDir="false" />
+    <list default="true" id="f69f4030-50b3-4bbf-9f69-682c0bc705a8" name="Changes" comment="onliner 3/4">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/onliner_page_objects/CartPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/driver/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/driver/Driver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/amazon/AmazonCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/amazon_page_objects/AmazonCartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/amazon/AmazonHeader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/amazon_page_objects/AmazonHeader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/amazon/AmazonLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/amazon_page_objects/AmazonLoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/amazon/AmazonMainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/amazon_page_objects/AmazonMainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/amazon/AmazonProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/amazon_page_objects/AmazonProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/amazon/AmazonProductsSearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/amazon_page_objects/AmazonProductsSearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/AmazonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/AmazonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/onliner_page_objects/MainPageOnlinerObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/onliner_page_objects/MainPageOnlinerObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/onliner_page_objects/ResultProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/pageobjects/onliner_page_objects/ResultProductPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/OnlinerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/OnlinerTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,8 +86,8 @@
       <command value="gradle clean test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.OnlinerTests.addingTheProductToCartTest">
-    <configuration name="AmazonTest.addingToCartTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.AmazonTest">
+    <configuration name="AmazonTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -105,7 +100,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.innowise.innowise_practice.AmazonTest.addingToCartTest&quot;" />
+            <option value="&quot;com.innowise.innowise_practice.AmazonTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -116,7 +111,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="AmazonTest.cartCheck" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OnlinerTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -129,7 +124,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.innowise.innowise_practice.AmazonTest.cartCheck&quot;" />
+            <option value="&quot;com.innowise.innowise_practice.OnlinerTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -140,7 +135,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="OnlinerTests.addingTheProductToCartTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OnlinerTests.removingProductFromCart" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -153,7 +148,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.innowise.innowise_practice.OnlinerTests.addingTheProductToCartTest&quot;" />
+            <option value="&quot;com.innowise.innowise_practice.OnlinerTests.removingProductFromCart&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -164,7 +159,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="RelaxTests.lunabarTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OnlinerTests.shoppingCartTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -177,7 +172,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.innowise.innowise_practice.RelaxTests.lunabarTest&quot;" />
+            <option value="&quot;com.innowise.innowise_practice.OnlinerTests.shoppingCartTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -188,7 +183,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="RelaxTests.restaurantsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RelaxTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -201,7 +196,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.innowise.innowise_practice.RelaxTests.restaurantsTest&quot;" />
+            <option value="&quot;com.innowise.innowise_practice.RelaxTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -214,11 +209,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.OnlinerTests.addingTheProductToCartTest" />
-        <item itemvalue="Gradle.RelaxTests.restaurantsTest" />
-        <item itemvalue="Gradle.RelaxTests.lunabarTest" />
-        <item itemvalue="Gradle.AmazonTest.cartCheck" />
-        <item itemvalue="Gradle.AmazonTest.addingToCartTest" />
+        <item itemvalue="Gradle.AmazonTest" />
+        <item itemvalue="Gradle.OnlinerTests" />
+        <item itemvalue="Gradle.RelaxTests" />
+        <item itemvalue="Gradle.OnlinerTests.removingProductFromCart" />
+        <item itemvalue="Gradle.OnlinerTests.shoppingCartTest" />
       </list>
     </recent_temporary>
   </component>
@@ -240,5 +235,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

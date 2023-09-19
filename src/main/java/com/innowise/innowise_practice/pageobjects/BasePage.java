@@ -18,9 +18,9 @@ public abstract class BasePage implements CustomLogger {
 
     private static WebDriver driver = Driver.getDriver();
 
-    public static final WebDriverWait waiter = new WebDriverWait(driver, Duration.ofSeconds(10));
+    public WebDriverWait waiter = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
 
-    public static final Actions actions = new Actions(driver);
+    public Actions actions = new Actions(Driver.getDriver());
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -31,17 +31,17 @@ public abstract class BasePage implements CustomLogger {
         return webElement.isDisplayed();
     }
 
-    public static String getElementText(WebElement webElement) {
+    public String getElementText(WebElement webElement) {
         return waiter.until(ExpectedConditions.visibilityOf(webElement)).getText();
     }
 
-    public static void clickElement(WebElement element) {
+    public void clickElement(WebElement element) {
         waitUntilClickable(element);
         element.click();
         staticLogger.info("'{}' is clicked", element); //получается некрасиво :с
     }
 
-    public static void moveToElementAndClick(WebElement element) {
+    public void moveToElementAndClick(WebElement element) {
         waitUntilClickable(element);
         actions
                 .moveToElement(element)
@@ -56,7 +56,7 @@ public abstract class BasePage implements CustomLogger {
         element.sendKeys(text);
     }
 
-    private static void waitUntilClickable(WebElement element) {
+    private void waitUntilClickable(WebElement element) {
         waiter.until(ExpectedConditions.elementToBeClickable(element));
     }
 
@@ -69,11 +69,15 @@ public abstract class BasePage implements CustomLogger {
         return By.xpath(String.format(pattern, text));
     }
 
-    public static void waitUntilElementVisible(By by) {
+    public void waitUntilElementVisible(By by) {
         waiter.until(ExpectedConditions.visibilityOf(Driver.getDriver().findElement(by)));
     }
 
-    public static void waitUntilElementVisible(WebElement element) {
+    public void waitUntilElementVisible(WebElement element) {
         waiter.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public void waitUntilElementClickable(WebElement element) {
+        waiter.until(ExpectedConditions.elementToBeClickable(element));
     }
 }

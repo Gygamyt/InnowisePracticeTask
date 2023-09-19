@@ -22,10 +22,11 @@ public class MainPageOnlinerObject extends BasePage {
 
 
     public MainPageOnlinerObject clickOnSearchFieldAndEnterText(String searchText) {
-        clickElement(searchFieldInput);
         actions
-                .sendKeys(searchText)
+                .moveToElement(searchFieldInput)
+                .click()
                 .perform();
+        searchFieldInput.sendKeys(searchText);
         return this;
     }
 

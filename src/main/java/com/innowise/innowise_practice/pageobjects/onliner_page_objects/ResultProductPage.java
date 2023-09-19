@@ -27,7 +27,6 @@ public class ResultProductPage extends BasePage {
     @FindBy(xpath = "//div[@class=\"product-aside__offers-list\"]")
     private WebElement offersList;
 
-
     @FindBy(xpath = "//div[@class=\"product-recommended__subheader\"]")
     private WebElement productIsAddedTextPlace;
 
@@ -66,4 +65,12 @@ public class ResultProductPage extends BasePage {
         return getElementText(selectedItemXPath);
     }
 
+    public boolean isAllOfRightButtonsAppears() {
+        return isElementVisible(productIsAddedTextPlace) && isElementVisible(continueButton) && isElementVisible(goToCartButton);
+    }
+
+    public CartPage clickOnGoToCartButton() {
+        clickElement(goToCartButton);
+        return new CartPage(Driver.getDriver());
+    }
 }

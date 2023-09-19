@@ -61,7 +61,7 @@ public class AmazonTest extends BaseTest {
     }
 
     @Test
-    public void cartCheck() throws InterruptedException {
+    public void cartCheck() {
         openLink(LinksForTestsEnum.AMAZON.getLink());
 
         amazonHeader
@@ -76,6 +76,5 @@ public class AmazonTest extends BaseTest {
                 () -> assertTrue(amazonCartPage.isCartOpened()),
                 () -> assertTrue(amazonCartPage.isProductVisible())
         );
-        Thread.sleep(5000);
     }
 }

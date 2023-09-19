@@ -18,7 +18,6 @@ public class Driver implements CustomLogger {
         if (localStorage.get() == null) {
             localStorage.set(setDriverConfigs());
             setUpImplicitWait();
-
             staticLogger.info("new driver has been created");
         }
         staticLogger.info("driver has been called");
