@@ -32,7 +32,7 @@ public class OnlinerTests extends BaseTest {
     }
 
     @Test
-    public void addingTheProductToCartTest() {
+    public void addingTheProductToCartTest() throws InterruptedException {
         Driver.openLink(LinksForTestsEnum.ONLINER.getLink());
         mainPageOnliner
                 .clickOnSearchFieldAndEnterText(request)
@@ -41,5 +41,7 @@ public class OnlinerTests extends BaseTest {
                 () -> assertEquals(resultProductPage.getProductResultTittleText(), request),
                 () -> assertEquals(resultProductPage.getSelectedItemText(), "Описание и фото")
         );
+        resultProductPage.addProductWithLowestPriceToCart();
+        Thread.sleep(5000);
     }
 }

@@ -2,14 +2,13 @@ package com.innowise.innowise_practice.pageobjects.onliner_page_objects;
 
 import com.innowise.innowise_practice.driver.Driver;
 import com.innowise.innowise_practice.pageobjects.BasePage;
-import com.innowise.innowise_practice.pageobjects.onliner_page_objects.util.ProductPOJO;
 import com.innowise.innowise_practice.utils.NumbersParser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,23 +27,35 @@ public class ResultProductPage extends BasePage {
     @FindBy(xpath = "//div[@class=\"product-aside__offers-list\"]")
     private WebElement offersList;
 
+
+    @FindBy(xpath = "//div[@class=\"product-recommended__subheader\"]")
+    private WebElement productIsAddedTextPlace;
+
+    @FindBy(xpath = "//div[contains(@class, \"product-recommended__control\")]/a[contains(@class, \"helpers\")]")
+    private WebElement continueButton;
+
+    @FindBy(xpath = "//div[contains(@class, \"product-recommended__control\")]/a[contains(@href, \"cart\")]")
+    private WebElement goToCartButton;
+
     private final String offersForMapping = "//div[contains(@class, \"product-aside__offers-item\")]";
 
 
     private WebElement selectOfferWithLowestPrice() {
 
-        Map<Double, WebElement> elementHashMap = new HashMap<>();
+        Map<WebElement, Double> elementHashMap = new HashMap<>();
 
         List<WebElement> offersForMappingElements = findElementsByStringXPath(offersForMapping);
 
-        ArrayList<ProductPOJO> productPOJOArrayList = new ArrayList<>();
-
         offersForMappingElements
-                .forEach(element -> productPOJOArrayList
-                        .add(new ProductPOJO(element.findElement(By.xpath("//a[contains(text(), 'В корзину')]")),
-                                NumbersParser.parseDouble(element.findElement(By.xpath("//a//span")).getText()))));
+                .forEach(element -> elementHashMap.put(Driver.getDriver().findElement(By.xpath(offersForMapping + "//a[contains(text(), 'В корзину')]")),
+                        NumbersParser.parseDouble(Driver.getDriver().findElement(By.xpath(offersForMapping + "//a//span")).getText())));
 
-        return ;
+        return elementHashMap.keySet().stream().min(Comparator.comparing(elementHashMap::get)).orElse(null);
+    }
+
+    public ResultProductPage addProductWithLowestPriceToCart() {
+        clickElement(selectOfferWithLowestPrice());
+        return this;
     }
 
     public String getProductResultTittleText() {
@@ -54,4 +65,5 @@ public class ResultProductPage extends BasePage {
     public String getSelectedItemText() {
         return getElementText(selectedItemXPath);
     }
+
 }
