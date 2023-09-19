@@ -1,7 +1,7 @@
 package com.innowise.innowise_practice;
 
 import com.innowise.innowise_practice.driver.Driver;
-import com.innowise.innowise_practice.pageobjects.amazon.*;
+import com.innowise.innowise_practice.pageobjects.amazon_page_objects.*;
 import com.innowise.innowise_practice.utils.LinksForTestsEnum;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

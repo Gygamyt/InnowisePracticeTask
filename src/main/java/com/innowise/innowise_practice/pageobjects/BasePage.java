@@ -68,4 +68,12 @@ public abstract class BasePage implements CustomLogger {
     public static By formatStringForXPath(String pattern, String text) {
         return By.xpath(String.format(pattern, text));
     }
+
+    public static void waitUntilElementVisible(By by) {
+        waiter.until(ExpectedConditions.visibilityOf(Driver.getDriver().findElement(by)));
+    }
+
+    public static void waitUntilElementVisible(WebElement element) {
+        waiter.until(ExpectedConditions.visibilityOf(element));
+    }
 }

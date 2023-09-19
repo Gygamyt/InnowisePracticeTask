@@ -1,4 +1,4 @@
-package com.innowise.innowise_practice.pageobjects.amazon;
+package com.innowise.innowise_practice.pageobjects.amazon_page_objects;
 
 import com.innowise.innowise_practice.pageobjects.BasePage;
 import org.openqa.selenium.WebDriver;
