@@ -8,27 +8,27 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.time.Duration;
 
 public class Driver implements CustomLogger {
-    private static final ThreadLocal<WebDriver> localStorage = new ThreadLocal<>();
+    private static final ThreadLocal<WebDriver> DRIVER_THREAD_LOCAL_STORAGE = new ThreadLocal<>();
 
     private Driver() {
     }
 
 
     public static WebDriver getDriver() {
-        if (localStorage.get() == null) {
-            localStorage.set(setDriverConfigs());
+        if (DRIVER_THREAD_LOCAL_STORAGE.get() == null) {
+            DRIVER_THREAD_LOCAL_STORAGE.set(setDriverConfigs());
             setUpImplicitWait();
             staticLogger.info("new driver has been created");
         }
         staticLogger.info("driver has been called");
-        return localStorage.get();
+        return DRIVER_THREAD_LOCAL_STORAGE.get();
     }
 
     public static void quitWebDriver() {
-        localStorage.get().close();
-        localStorage.get().quit();
+        DRIVER_THREAD_LOCAL_STORAGE.get().close();
+        DRIVER_THREAD_LOCAL_STORAGE.get().quit();
         staticLogger.info("quit from browser");
-        localStorage.remove();
+        DRIVER_THREAD_LOCAL_STORAGE.remove();
         staticLogger.info("local storage has been cleaned");
     }
 
@@ -39,14 +39,14 @@ public class Driver implements CustomLogger {
         chromeOptions.addArguments("--no-sandbox");
         chromeOptions.addArguments("--disable-extensions");
         chromeOptions.addArguments("--remote-allow-origins=*");
-//        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--disable-dev-shm-usage");
         chromeOptions.addArguments("--window-size=1920x1080");
         return new ChromeDriver(chromeOptions);
     }
 
     private static void setUpImplicitWait() {
-        localStorage.get()
+        DRIVER_THREAD_LOCAL_STORAGE.get()
                 .manage()
                 .timeouts()
                 .implicitlyWait(Duration.ofSeconds(5));

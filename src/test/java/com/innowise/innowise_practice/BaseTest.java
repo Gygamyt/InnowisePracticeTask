@@ -1,19 +1,12 @@
 package com.innowise.innowise_practice;
 
-import com.innowise.innowise_practice.driver.Driver;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import com.innowise.innowise_practice.utils.CustomTestWatcher;
+import org.junit.jupiter.api.extension.RegisterExtension;
+
+import static com.innowise.innowise_practice.driver.Driver.getDriver;
 
 public abstract class BaseTest implements CustomLogger {
-    @BeforeEach
-    public void setUpDriver() {
-        Driver.getDriver();
-    }
 
-    @AfterEach
-    public void killDriver() {
-        if (Driver.getDriver() != null) {
-            Driver.quitWebDriver();
-        }
-    }
+    @RegisterExtension
+    public CustomTestWatcher customTestWatcher = new CustomTestWatcher(getDriver());
 }

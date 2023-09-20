@@ -20,7 +20,7 @@ public class GooglePageObject extends BasePage {
     @FindBy(xpath = "//button[@aria-label=\"More target languages\"]")
     private WebElement expandAllLanguagesButtonRight;
 
-    @FindBy(xpath = "//div[@data-irrelevant-id=\"ucj-240\"]")
+    @FindBy(xpath = "(//div[@data-language-code=\"ru\"])[2]")
     private WebElement russianLanguageRightButtonWhenExpanded;
 
     @FindBy(xpath = "//span[@lang=\"en\"]")

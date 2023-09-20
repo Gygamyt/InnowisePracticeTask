@@ -23,6 +23,9 @@ public class RelaxHeader extends BasePage {
     @FindBy(xpath = "//a[text()='Рестораны']")
     private WebElement restaurantsButton;
 
+    @FindBy(xpath = "//div[contains(@class, \"Gallery__list\")]//div[@title=\"Афиша, кино\"]")
+    private WebElement afishaButton;
+
     public LunabarPageObject openLunabarPage() {
         moveToElementAndClick(searchBarField);
         actions
