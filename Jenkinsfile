@@ -8,7 +8,8 @@ pipeline {
         }
         stage('Tests') {
             steps {
-                  bat "./gradlew clean test"
+                  sh "chmod +x gradlew"
+                  sh "./gradlew clean test"
             }
         }
             }
