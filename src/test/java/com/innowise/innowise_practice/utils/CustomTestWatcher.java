@@ -2,17 +2,13 @@ package com.innowise.innowise_practice.utils;
 
 import com.innowise.innowise_practice.CustomLogger;
 import com.innowise.innowise_practice.driver.Driver;
-import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
-import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.TestWatcher;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.Optional;
 
 public class CustomTestWatcher implements TestWatcher, CustomLogger {
