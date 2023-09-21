@@ -1,4 +1,4 @@
-package com.innowise.innowise_practice.utils;
+package com.innowise.innowise_practice.ui.utils;
 
 public enum LinksForTestsEnum {
     ONLINER("https://www.onliner.by/"),

@@ -1,9 +1,9 @@
-package com.innowise.innowise_practice;
+package com.innowise.innowise_practice.ui;
 
 import com.innowise.innowise_practice.driver.Driver;
 import com.innowise.innowise_practice.pageobjects.relax_by_page_objects.LunabarPageObject;
 import com.innowise.innowise_practice.pageobjects.relax_by_page_objects.RelaxHeader;
-import com.innowise.innowise_practice.utils.LinksForTestsEnum;
+import com.innowise.innowise_practice.ui.utils.LinksForTestsEnum;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;

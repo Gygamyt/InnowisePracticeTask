@@ -2,7 +2,7 @@ package com.innowise.innowise_practice.pageobjects.amazon_page_objects;
 
 import com.innowise.innowise_practice.driver.Driver;
 import com.innowise.innowise_practice.pageobjects.BasePage;
-import com.innowise.innowise_practice.utils.LogsAndPasses;
+import com.innowise.innowise_practice.ui.utils.LogsAndPasses;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

@@ -2,7 +2,7 @@ package com.innowise.innowise_practice.pageobjects.onliner_page_objects;
 
 import com.innowise.innowise_practice.driver.Driver;
 import com.innowise.innowise_practice.pageobjects.BasePage;
-import com.innowise.innowise_practice.utils.NumbersParser;
+import com.innowise.innowise_practice.ui.utils.NumbersParser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

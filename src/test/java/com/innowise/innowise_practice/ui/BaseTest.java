@@ -1,6 +1,7 @@
-package com.innowise.innowise_practice;
+package com.innowise.innowise_practice.ui;
 
-import com.innowise.innowise_practice.utils.CustomTestWatcher;
+import com.innowise.innowise_practice.CustomLogger;
+import com.innowise.innowise_practice.ui.utils.CustomTestWatcher;
 import org.junit.jupiter.api.extension.RegisterExtension;
 
 import static com.innowise.innowise_practice.driver.Driver.getDriver;

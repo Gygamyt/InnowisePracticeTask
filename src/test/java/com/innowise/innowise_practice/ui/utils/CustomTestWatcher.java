@@ -1,4 +1,4 @@
-package com.innowise.innowise_practice.utils;
+package com.innowise.innowise_practice.ui.utils;
 
 import com.innowise.innowise_practice.CustomLogger;
 import com.innowise.innowise_practice.driver.Driver;
@@ -21,14 +21,14 @@ public class CustomTestWatcher implements TestWatcher, CustomLogger {
 
     @Override
     public void testSuccessful(ExtensionContext context) {
-        logger().info("test successful");
+        logger().info("test successful    " + context.getTestMethod());
         getScreenshot(driver);
         Driver.quitWebDriver();
     }
 
     @Override
     public void testFailed(ExtensionContext context, Throwable cause) {
-        logger().info("test pomer" + cause.getMessage());
+        logger().info("test pomer   " + context.getTestMethod());
         getScreenshot(driver);
         Driver.quitWebDriver();
     }

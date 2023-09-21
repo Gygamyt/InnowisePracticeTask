@@ -1,6 +1,5 @@
-package com.innowise.innowise_practice.utils;
+package com.innowise.innowise_practice.ui.utils;
 
-import java.text.DateFormatSymbols;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.ParseException;
