@@ -47,6 +47,11 @@ dependencies {
     implementation("com.vk.api:sdk:1.0.14")
 
     implementation ('com.google.code.gson:gson:2.10.1')
+
+    implementation("io.rest-assured:rest-assured:5.3.2")
+
+    implementation("com.fasterxml.jackson.core:jackson-core:2.15.2")
+
 }
 
 test {

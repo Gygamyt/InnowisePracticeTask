@@ -1,8 +1,8 @@
 package com.innowise.innowise_practice.ui;
 
-import com.innowise.innowise_practice.driver.Driver;
-import com.innowise.innowise_practice.pageobjects.relax_by_page_objects.LunabarPageObject;
-import com.innowise.innowise_practice.pageobjects.relax_by_page_objects.RelaxHeader;
+import com.innowise.innowise_practice.ui.driver.Driver;
+import com.innowise.innowise_practice.ui.pageobjects.relax_by_page_objects.LunabarPageObject;
+import com.innowise.innowise_practice.ui.pageobjects.relax_by_page_objects.RelaxHeader;
 import com.innowise.innowise_practice.ui.utils.LinksForTestsEnum;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -12,7 +12,7 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.innowise.innowise_practice.driver.Driver.openLink;
+import static com.innowise.innowise_practice.ui.driver.Driver.openLink;
 
 public class RelaxTests extends BaseTest {
 

@@ -1,13 +1,13 @@
 package com.innowise.innowise_practice.ui;
 
-import com.innowise.innowise_practice.driver.Driver;
-import com.innowise.innowise_practice.pageobjects.amazon_page_objects.*;
+import com.innowise.innowise_practice.ui.driver.Driver;
+import com.innowise.innowise_practice.ui.pageobjects.amazon_page_objects.*;
 import com.innowise.innowise_practice.ui.utils.LinksForTestsEnum;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 
-import static com.innowise.innowise_practice.driver.Driver.openLink;
+import static com.innowise.innowise_practice.ui.driver.Driver.openLink;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AmazonTest extends BaseTest {

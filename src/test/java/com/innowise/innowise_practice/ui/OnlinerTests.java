@@ -1,14 +1,14 @@
 package com.innowise.innowise_practice.ui;
 
-import com.innowise.innowise_practice.driver.Driver;
-import com.innowise.innowise_practice.pageobjects.onliner_page_objects.CartPage;
-import com.innowise.innowise_practice.pageobjects.onliner_page_objects.MainPageOnlinerObject;
-import com.innowise.innowise_practice.pageobjects.onliner_page_objects.ResultProductPage;
+import com.innowise.innowise_practice.ui.driver.Driver;
+import com.innowise.innowise_practice.ui.pageobjects.onliner_page_objects.CartPage;
+import com.innowise.innowise_practice.ui.pageobjects.onliner_page_objects.MainPageOnlinerObject;
+import com.innowise.innowise_practice.ui.pageobjects.onliner_page_objects.ResultProductPage;
 import com.innowise.innowise_practice.ui.utils.LinksForTestsEnum;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static com.innowise.innowise_practice.driver.Driver.openLink;
+import static com.innowise.innowise_practice.ui.driver.Driver.openLink;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
