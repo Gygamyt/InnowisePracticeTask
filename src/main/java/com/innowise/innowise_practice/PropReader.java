@@ -2,7 +2,6 @@ package com.innowise.innowise_practice;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Properties;
 
 public class PropReader {
