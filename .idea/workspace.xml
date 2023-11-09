@@ -4,17 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f69f4030-50b3-4bbf-9f69-682c0bc705a8" name="Changes" comment="relax 3/4">
+    <list default="true" id="f69f4030-50b3-4bbf-9f69-682c0bc705a8" name="Changes" comment="ui tests rewritten">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/utils/LoggerAnnotation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/utils/LoggingAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/utils/Reflector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/CustomLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/utils/CustomLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/PropReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/utils/PropReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/api/endpoints/OnlinerEndpoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/api/endpoints/OnlinerEndpoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/api/models/SushiPageModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/api/models/SushiPageModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/driver/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/driver/Driver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/amazon_page_objects/AmazonProductsSearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/amazon_page_objects/AmazonProductsSearchPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/api/vk/VKTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/api/vk/VKTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/AmazonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/AmazonTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/GoogleTranslateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/GoogleTranslateTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/OnlinerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/OnlinerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/RelaxTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/RelaxTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/utils/CustomTestWatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/utils/CustomTestWatcher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +46,11 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="innowise_practice" type="f1a62948:ProjectNode" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="innowise_practice" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -51,6 +62,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -58,7 +70,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="some_refactoring_branch" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -113,6 +125,30 @@
     </option>
   </component>
   <component name="RunManager" selected="Gradle.InnowisePracticeTask [clean test]">
+    <configuration name="AmazonTest.loginAmazonTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.innowise.innowise_practice.ui.AmazonTest.loginAmazonTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <configuration name="GoogleTranslateTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -126,7 +162,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.innowise.innowise_practice.GoogleTranslateTest&quot;" />
+            <option value="&quot;com.innowise.innowise_practice.ui.GoogleTranslateTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -135,28 +171,6 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="InnowisePracticeTask [allureReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="allureReport" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="InnowisePracticeTask [allureServe]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -230,11 +244,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.VKTest.test" />
         <item itemvalue="Gradle.InnowisePracticeTask [clean test]" />
-        <item itemvalue="Gradle.InnowisePracticeTask [allureServe]" />
-        <item itemvalue="Gradle.InnowisePracticeTask [allureReport]" />
         <item itemvalue="Gradle.GoogleTranslateTest" />
+        <item itemvalue="Gradle.AmazonTest.loginAmazonTest" />
+        <item itemvalue="Gradle.VKTest.test" />
+        <item itemvalue="Gradle.InnowisePracticeTask [allureServe]" />
       </list>
     </recent_temporary>
   </component>
@@ -262,7 +276,40 @@
       <workItem from="1698917703714" duration="1213000" />
       <workItem from="1699259176156" duration="2142000" />
       <workItem from="1699517476053" duration="428000" />
+      <workItem from="1699517940235" duration="9685000" />
+      <workItem from="1699527675776" duration="39000" />
+      <workItem from="1699527724615" duration="860000" />
+      <workItem from="1699528621312" duration="535000" />
     </task>
+    <task id="LOCAL-00001" summary="versions selenium">
+      <created>1699518086804</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699518086804</updated>
+    </task>
+    <task id="LOCAL-00002" summary="just check">
+      <created>1699518166966</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699518166966</updated>
+    </task>
+    <task id="LOCAL-00003" summary="versions">
+      <created>1699518400604</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699518400604</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ui tests rewritten">
+      <created>1699520921265</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699520921265</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +326,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="some_refactoring_branch" />
                       </list>
                     </value>
                   </entry>
@@ -290,5 +337,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="versions selenium" />
+    <MESSAGE value="just check" />
+    <MESSAGE value="versions" />
+    <MESSAGE value="ui tests rewritten" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui tests rewritten" />
   </component>
 </project>

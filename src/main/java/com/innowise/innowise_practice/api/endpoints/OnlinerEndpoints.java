@@ -1,6 +1,6 @@
 package com.innowise.innowise_practice.api.endpoints;
 
-import com.innowise.innowise_practice.PropReader;
+import com.innowise.innowise_practice.ui.utils.PropReader;
 
 public class OnlinerEndpoints {
 

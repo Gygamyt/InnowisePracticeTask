@@ -1,7 +1,8 @@
 package com.innowise.innowise_practice.ui.pageobjects;
 
-import com.innowise.innowise_practice.CustomLogger;
+import com.innowise.innowise_practice.ui.utils.CustomLogger;
 import com.innowise.innowise_practice.ui.driver.Driver;
+import com.innowise.innowise_practice.ui.utils.Reflector;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public abstract class BasePage implements CustomLogger {
+public abstract class BasePage implements CustomLogger, Reflector {
 
 
     public WebDriver driver;
@@ -38,7 +39,7 @@ public abstract class BasePage implements CustomLogger {
     public void clickElement(WebElement element) {
         waitUntilClickable(element);
         element.click();
-        staticLogger.info("'{}' is clicked", element); //получается некрасиво :с
+        staticLogger.info("'{}' is clicked", element);
     }
 
     public void moveToElementAndClick(WebElement element) {

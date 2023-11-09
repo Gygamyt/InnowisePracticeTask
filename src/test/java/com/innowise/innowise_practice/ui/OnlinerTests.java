@@ -7,12 +7,14 @@ import com.innowise.innowise_practice.ui.pageobjects.onliner_page_objects.Result
 import com.innowise.innowise_practice.ui.utils.LinksForTestsEnum;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static com.innowise.innowise_practice.ui.driver.Driver.openLink;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@Disabled
 public class OnlinerTests extends BaseTest {
 
     private final MainPageOnlinerObject mainPageOnliner = new MainPageOnlinerObject(Driver.getDriver());

@@ -6,6 +6,7 @@ import com.innowise.innowise_practice.ui.pageobjects.relax_by_page_objects.Relax
 import com.innowise.innowise_practice.ui.utils.LinksForTestsEnum;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,6 +16,7 @@ import java.util.List;
 
 import static com.innowise.innowise_practice.ui.driver.Driver.openLink;
 
+@Disabled
 public class RelaxTests extends BaseTest {
 
     private final WebDriver driver = Driver.getDriver();

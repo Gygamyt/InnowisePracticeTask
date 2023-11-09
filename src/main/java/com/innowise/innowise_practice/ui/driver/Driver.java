@@ -1,6 +1,6 @@
 package com.innowise.innowise_practice.ui.driver;
 
-import com.innowise.innowise_practice.CustomLogger;
+import com.innowise.innowise_practice.ui.utils.CustomLogger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;

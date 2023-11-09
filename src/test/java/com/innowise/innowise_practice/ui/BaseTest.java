@@ -1,6 +1,6 @@
 package com.innowise.innowise_practice.ui;
 
-import com.innowise.innowise_practice.CustomLogger;
+import com.innowise.innowise_practice.ui.utils.CustomLogger;
 import com.innowise.innowise_practice.ui.driver.Driver;
 import com.innowise.innowise_practice.ui.utils.CustomTestWatcher;
 import org.junit.jupiter.api.AfterAll;

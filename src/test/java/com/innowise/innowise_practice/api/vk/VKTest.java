@@ -1,6 +1,6 @@
 package com.innowise.innowise_practice.api.vk;
 
-import com.innowise.innowise_practice.PropReader;
+import com.innowise.innowise_practice.ui.utils.PropReader;
 import com.vk.api.sdk.client.TransportClient;
 import com.vk.api.sdk.client.VkApiClient;
 import com.vk.api.sdk.client.actors.UserActor;

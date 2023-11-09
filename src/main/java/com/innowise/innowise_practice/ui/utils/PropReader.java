@@ -1,4 +1,4 @@
-package com.innowise.innowise_practice;
+package com.innowise.innowise_practice.ui.utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;

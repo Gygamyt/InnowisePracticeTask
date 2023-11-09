@@ -1,6 +1,5 @@
 package com.innowise.innowise_practice.ui.utils;
 
-import com.innowise.innowise_practice.CustomLogger;
 import com.innowise.innowise_practice.ui.driver.Driver;
 import io.qameta.allure.Attachment;
 import org.junit.jupiter.api.extension.*;
