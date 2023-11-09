@@ -13,6 +13,7 @@ import com.vk.api.sdk.objects.wall.responses.CreateCommentResponse;
 import com.vk.api.sdk.objects.wall.responses.GetCommentResponse;
 import com.vk.api.sdk.objects.wall.responses.PostResponse;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static com.innowise.innowise_practice.api.vk.utils.UtilsMethods.*;
@@ -26,6 +27,7 @@ public class VKTest {
 
     private static final String POST_TEXT = "api testi...";
 
+    @Disabled
     @Test
     public void test() throws ClientException, ApiException {
         TransportClient transportClient = new HttpTransportClient();

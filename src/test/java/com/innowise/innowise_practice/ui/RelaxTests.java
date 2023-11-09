@@ -5,6 +5,7 @@ import com.innowise.innowise_practice.ui.pageobjects.relax_by_page_objects.Lunab
 import com.innowise.innowise_practice.ui.pageobjects.relax_by_page_objects.RelaxHeader;
 import com.innowise.innowise_practice.ui.utils.LinksForTestsEnum;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,8 +20,6 @@ public class RelaxTests extends BaseTest {
     private final WebDriver driver = Driver.getDriver();
 
     private final RelaxHeader relaxHeader = new RelaxHeader(driver);
-
-    private final LunabarPageObject lunabarPageObject = new LunabarPageObject(driver);
 
     @Test
     public void lunabarTest() {
@@ -55,18 +54,18 @@ public class RelaxTests extends BaseTest {
             add("Выходной");
         }};
 
-        openLink(LinksForTestsEnum.RELAX_BY.getLink());
+        var resultPage = relaxHeader
+                .openLunabarPage();
 
-        ArrayList<String> resultNumbers = relaxHeader
-                .openLunabarPage()
+        ArrayList<String> resultNumbers = resultPage
                 .clickPhoneNumbersButton()
                 .getAllPhoneNumbers();
 
-        String currentAddress = lunabarPageObject
+        String currentAddress = resultPage
                 .clickOnCloseButton()
                 .getCurrentAddress();
 
-        ArrayList<String> resultHours = lunabarPageObject
+        ArrayList<String> resultHours = resultPage
                 .clickOnWorkHoursButton()
                 .getCurrentWorkHours();
 
@@ -79,7 +78,6 @@ public class RelaxTests extends BaseTest {
 
     @Test
     public void restaurantsTest() {
-        openLink(LinksForTestsEnum.RELAX_BY.getLink());
         List<WebElement> selectedElements = relaxHeader
                 .clickFoodButton()
                 .clickRestaurantButton()
@@ -91,5 +89,9 @@ public class RelaxTests extends BaseTest {
                 .takeAllSelectedElements();
     }
 
-
+    @Override
+    @BeforeEach
+    public void openPage() {
+        openLink(LinksForTestsEnum.RELAX_BY.getLink());
+    }
 }

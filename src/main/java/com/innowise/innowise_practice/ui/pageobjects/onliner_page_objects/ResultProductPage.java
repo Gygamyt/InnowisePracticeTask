@@ -71,6 +71,6 @@ public class ResultProductPage extends BasePage {
 
     public CartPage clickOnGoToCartButton() {
         clickElement(goToCartButton);
-        return new CartPage(Driver.getDriver());
+        return new CartPage(this.driver);
     }
 }

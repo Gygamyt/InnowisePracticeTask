@@ -33,6 +33,6 @@ public class MainPageOnlinerObject extends BasePage {
     public ResultProductPage openSearchResult() {
         Driver.getDriver().switchTo().frame(iFrame);
         clickElement(resultOfSearch);
-        return new ResultProductPage(Driver.getDriver());
+        return new ResultProductPage(this.driver);
     }
 }

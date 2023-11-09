@@ -33,7 +33,7 @@ public class Driver implements CustomLogger {
     }
 
     private static WebDriver setDriverConfigs() {
-        ChromeOptions chromeOptions = new ChromeOptions();
+        var chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("enable-automation");
         chromeOptions.addArguments("--start-maximized");
         chromeOptions.addArguments("--no-sandbox");
@@ -58,8 +58,8 @@ public class Driver implements CustomLogger {
 
     public static void killAllDrivers() {
         while (DRIVER_THREAD_LOCAL_STORAGE.get() != null) {
-            DRIVER_THREAD_LOCAL_STORAGE.get()
-                    .quit();
+            DRIVER_THREAD_LOCAL_STORAGE.get().close();
+            DRIVER_THREAD_LOCAL_STORAGE.get().quit();
         }
     }
 }

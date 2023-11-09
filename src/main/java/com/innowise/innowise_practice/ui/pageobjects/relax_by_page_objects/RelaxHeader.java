@@ -32,7 +32,7 @@ public class RelaxHeader extends BasePage {
                 .sendKeys("Luna")
                 .perform();
         clickElement(lunabarResult);
-        return new LunabarPageObject(Driver.getDriver());
+        return new LunabarPageObject(this.driver);
     }
 
     public RelaxHeader clickFoodButton() {
@@ -42,6 +42,6 @@ public class RelaxHeader extends BasePage {
 
     public RestaurantsPage clickRestaurantButton() {
         clickElement(restaurantsButton);
-        return new RestaurantsPage(Driver.getDriver());
+        return new RestaurantsPage(this.driver);
     }
 }

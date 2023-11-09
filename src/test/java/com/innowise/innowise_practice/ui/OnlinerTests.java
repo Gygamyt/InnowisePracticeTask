@@ -6,6 +6,7 @@ import com.innowise.innowise_practice.ui.pageobjects.onliner_page_objects.MainPa
 import com.innowise.innowise_practice.ui.pageobjects.onliner_page_objects.ResultProductPage;
 import com.innowise.innowise_practice.ui.utils.LinksForTestsEnum;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static com.innowise.innowise_practice.ui.driver.Driver.openLink;
@@ -13,7 +14,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class OnlinerTests extends BaseTest {
-
 
     private final MainPageOnlinerObject mainPageOnliner = new MainPageOnlinerObject(Driver.getDriver());
 
@@ -26,47 +26,42 @@ public class OnlinerTests extends BaseTest {
     private static final String requestedProductLink = "https://catalog.onliner.by/mobile/samsung/sma525fzkdser";
 
     @Test
-//    @RepeatedTest(3)
     public void searchTest() {
-        openLink(LinksForTestsEnum.ONLINER.getLink());
-        mainPageOnliner
+        var resultPage = mainPageOnliner
                 .clickOnSearchFieldAndEnterText(request)
                 .openSearchResult();
-        assertEquals(requestedProductLink, Driver.getDriver().getCurrentUrl());
+        assertEquals(requestedProductLink, resultPage.getPageUrl());
     }
 
     @Test
     public void addingTheProductToCartTest() {
-        openLink(LinksForTestsEnum.ONLINER.getLink());
-        mainPageOnliner
+        var resultPage = mainPageOnliner
                 .clickOnSearchFieldAndEnterText(request)
                 .openSearchResult();
         Assertions.assertAll(
-                () -> assertEquals(resultProductPage.getProductResultTittleText(), request),
-                () -> assertEquals(resultProductPage.getSelectedItemText(), "Описание и фото")
+                () -> assertEquals(resultPage.getProductResultTittleText(), request),
+                () -> assertEquals(resultPage.getSelectedItemText(), "Описание и фото")
         );
-        resultProductPage
+        resultPage
                 .addProductWithLowestPriceToCart();
-        assertTrue(resultProductPage.isAllOfRightButtonsAppears());
+        assertTrue(resultPage.isAllOfRightButtonsAppears());
     }
 
     @Test
     public void shoppingCartTest() {
-        openLink(LinksForTestsEnum.ONLINER.getLink());
-        mainPageOnliner
+        var resultPage = mainPageOnliner
                 .clickOnSearchFieldAndEnterText(request)
                 .openSearchResult()
                 .addProductWithLowestPriceToCart()
                 .clickOnGoToCartButton();
         Assertions.assertAll(
-                () -> assertEquals("https://cart.onliner.by/", Driver.getDriver().getCurrentUrl()) ,
-                () -> assertEquals(cartPage.getProductName(), request)
+                () -> assertEquals("https://cart.onliner.by/", resultPage.getPageUrl()),
+                () -> assertEquals(resultPage.getProductName(), request)
         );
     }
 
     @Test
     public void removingProductFromCart() {
-        openLink(LinksForTestsEnum.ONLINER.getLink());
         String textForAssert = mainPageOnliner
                 .clickOnSearchFieldAndEnterText(request)
                 .openSearchResult()
@@ -76,5 +71,11 @@ public class OnlinerTests extends BaseTest {
                 .clickOnCloseButton()
                 .getResultText();
         assertEquals("Ваша корзина пуста", textForAssert);
+    }
+
+    @Override
+    @BeforeEach
+    public void openPage() {
+        openLink(LinksForTestsEnum.ONLINER.getLink());
     }
 }

@@ -14,22 +14,9 @@ public class AmazonProductPage extends BasePage {
     @FindBy(id = "add-to-cart-button")
     private WebElement addToCartButton;
 
-    @FindBy(id = "NATC_SMART_WAGON_CONF_MSG_SUCCESS")
-    private WebElement successAddingToCartInformationElement;
-
-    @FindBy(xpath = "//div[@id=\"NATC_SMART_WAGON_CONF_MSG_SUCCESS\"]//i")
-    private WebElement greenIconElement;
-
     public AmazonHeader addToCart() {
         clickElement(addToCartButton);
-        return new AmazonHeader(Driver.getDriver());
+        return new AmazonHeader(this.driver);
     }
 
-    public boolean isAddedToCartTextAppears() {
-        return successAddingToCartInformationElement.getText().contains("Added to Cart");
-    }
-
-    public boolean isGreenIconAppears() {
-        return greenIconElement.isDisplayed();
-    }
 }

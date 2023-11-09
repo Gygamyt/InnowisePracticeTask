@@ -2,7 +2,7 @@ package com.innowise.innowise_practice.ui.pageobjects.amazon_page_objects;
 
 import com.innowise.innowise_practice.ui.driver.Driver;
 import com.innowise.innowise_practice.ui.pageobjects.BasePage;
-import com.innowise.innowise_practice.ui.utils.LogsAndPasses;
+import com.innowise.innowise_practice.ui.utils.CredentialsEnum;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,15 +27,15 @@ public class AmazonLoginPage extends BasePage {
 
     public AmazonMainPage loginAmazon() {
         actions
-                .sendKeys(LogsAndPasses.AMAZON_LOG.getInf())
+                .sendKeys(CredentialsEnum.AMAZON_LOG.getInf())
                 .moveToElement(continueButton)
                 .click()
                 .perform();
         actions
-                .sendKeys(LogsAndPasses.AMAZON_PASS.getInf())
+                .sendKeys(CredentialsEnum.AMAZON_PASS.getInf())
                 .moveToElement(signInButton)
                 .click()
                 .perform();
-        return new AmazonMainPage(Driver.getDriver());
+        return new AmazonMainPage(this.driver);
     }
 }

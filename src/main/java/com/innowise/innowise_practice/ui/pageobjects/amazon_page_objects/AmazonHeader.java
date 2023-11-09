@@ -24,13 +24,19 @@ public class AmazonHeader extends BasePage {
     @FindBy(id = "nav-cart")
     private WebElement cartButton;
 
+    @FindBy(id = "NATC_SMART_WAGON_CONF_MSG_SUCCESS")
+    private WebElement successAddingToCartInformationElement;
+
+    @FindBy(xpath = "//div[@id=\"NATC_SMART_WAGON_CONF_MSG_SUCCESS\"]//i")
+    private WebElement greenIconElement;
+
     public AmazonLoginPage hoverAccountsAndListsAndClickLogin() {
         actions
                 .moveToElement(AccountAndListButton)
                 .perform();
         waiter.until(ExpectedConditions.visibilityOf(signInButton));
         clickElement(signInButton);
-        return new AmazonLoginPage(Driver.getDriver());
+        return new AmazonLoginPage(this.driver);
     }
 
     public boolean isQuantityOfItemsIsOne() {
@@ -42,6 +48,14 @@ public class AmazonHeader extends BasePage {
                 .moveToElement(cartButton)
                 .click()
                 .perform();
-        return new AmazonCartPage(Driver.getDriver());
+        return new AmazonCartPage(this.driver);
+    }
+
+    public boolean isAddedToCartTextAppears() {
+        return successAddingToCartInformationElement.getText().contains("Added to Cart");
+    }
+
+    public boolean isGreenIconAppears() {
+        return greenIconElement.isDisplayed();
     }
 }

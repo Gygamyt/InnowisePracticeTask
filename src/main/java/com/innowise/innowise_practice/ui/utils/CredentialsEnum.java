@@ -1,6 +1,6 @@
 package com.innowise.innowise_practice.ui.utils;
 
-public enum LogsAndPasses {
+public enum CredentialsEnum {
 
     AMAZON_PASS("DuZMu3iR01K9"),
 
@@ -8,7 +8,7 @@ public enum LogsAndPasses {
 
     private String inf;
 
-    LogsAndPasses(String inf) {
+    CredentialsEnum(String inf) {
         this.inf = inf;
     }
 

@@ -1,6 +1,5 @@
 package com.innowise.innowise_practice.ui.pageobjects.amazon_page_objects;
 
-import com.innowise.innowise_practice.ui.driver.Driver;
 import com.innowise.innowise_practice.ui.pageobjects.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,6 +23,7 @@ public class AmazonProductsSearchPage extends BasePage {
 
     public AmazonProductPage openPageWithFirstProduct() {
         clickElement(everyProductXPath);
-        return new AmazonProductPage(Driver.getDriver());
+
+        return new AmazonProductPage(this.driver);
     }
 }

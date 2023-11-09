@@ -31,6 +31,6 @@ public class AmazonMainPage extends BasePage {
                 .sendKeys(productName)
                 .perform();
         submitSearchButton.click();
-        return new AmazonProductsSearchPage(Driver.getDriver()); //cheknyt' kak ono rabotaet
+        return new AmazonProductsSearchPage(this.driver);
     }
 }

@@ -15,7 +15,8 @@ import java.util.List;
 
 public abstract class BasePage implements CustomLogger {
 
-    private static WebDriver driver = Driver.getDriver();
+
+    public WebDriver driver;
 
     public WebDriverWait waiter = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
 
@@ -23,7 +24,7 @@ public abstract class BasePage implements CustomLogger {
 
     public BasePage(WebDriver driver) {
         PageFactory.initElements(driver, this);
-        BasePage.driver = driver;
+        this.driver = driver;
     }
 
     public static boolean isElementVisible(WebElement webElement) {
@@ -50,8 +51,6 @@ public abstract class BasePage implements CustomLogger {
     }
 
     public static void enterText(WebElement element, String text) {
-//        waitUntilClickable(element);
-//        element.click();
         element.sendKeys(text);
     }
 
@@ -78,5 +77,13 @@ public abstract class BasePage implements CustomLogger {
 
     public void waitUntilElementClickable(WebElement element) {
         waiter.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    public List<WebElement> getElementsWithBy(By by) {
+        return Driver.getDriver().findElements(by);
+    }
+
+    public String getPageUrl() {
+        return Driver.getDriver().getCurrentUrl();
     }
 }

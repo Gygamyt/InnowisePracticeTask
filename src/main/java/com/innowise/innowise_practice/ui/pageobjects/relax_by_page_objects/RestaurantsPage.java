@@ -91,6 +91,6 @@ public class RestaurantsPage extends BasePage {
     }
 
     public List<WebElement> takeAllSelectedElements() {
-        return Driver.getDriver().findElements(selectedElementsBy);
+        return getElementsWithBy(selectedElementsBy);
     }
 }
