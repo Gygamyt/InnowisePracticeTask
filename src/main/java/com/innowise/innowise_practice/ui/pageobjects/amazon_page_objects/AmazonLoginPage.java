@@ -5,11 +5,13 @@ import com.innowise.innowise_practice.ui.pageobjects.BasePage;
 import com.innowise.innowise_practice.ui.utils.CredentialsEnum;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AmazonLoginPage extends BasePage {
-    public AmazonLoginPage(WebDriver driver) {
-        super(driver);
+    public AmazonLoginPage(WebDriver driver, WebDriverWait waiter, Actions actions) {
+        super(driver, waiter, actions);
     }
 
     private final String INPUT_TYPE_PATTERN = "//input[@type='%s']";
@@ -36,6 +38,6 @@ public class AmazonLoginPage extends BasePage {
                 .moveToElement(signInButton)
                 .click()
                 .perform();
-        return new AmazonMainPage(this.driver);
+        return new AmazonMainPage(this.driver, this.waiter, this.actions);
     }
 }

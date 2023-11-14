@@ -1,4 +1,4 @@
-package com.innowise.innowise_practice.ui.utils;
+package com.innowise.innowise_practice.ui.logger;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

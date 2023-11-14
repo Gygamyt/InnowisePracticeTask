@@ -1,23 +1,19 @@
 package com.innowise.innowise_practice.ui;
 
-import com.innowise.innowise_practice.ui.driver.Driver;
-import com.innowise.innowise_practice.ui.pageobjects.amazon_page_objects.*;
+import com.innowise.innowise_practice.ui.pageobjects.amazon_page_objects.AmazonHeader;
 import com.innowise.innowise_practice.ui.utils.LinksForTestsEnum;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.openqa.selenium.WebDriver;
 
-import static com.innowise.innowise_practice.ui.driver.Driver.getDriver;
-import static com.innowise.innowise_practice.ui.driver.Driver.openLink;
+import static com.innowise.innowise_practice.ui.driver.Driver.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Disabled
 public class AmazonTest extends BaseTest {
 
-    private final AmazonHeader amazonHeader = new AmazonHeader(getDriver());
+    private final AmazonHeader amazonHeader = new AmazonHeader(getDriver(), getWaiter(), getActions());
 
     private final String productName = "iPhone";
 

@@ -4,8 +4,10 @@ import com.innowise.innowise_practice.ui.pageobjects.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,8 +15,9 @@ import java.util.List;
 import static com.innowise.innowise_practice.ui.driver.Driver.getDriver;
 
 public class LunabarPageObject extends BasePage {
-    public LunabarPageObject(WebDriver driver) {
-        super(driver);
+
+    public LunabarPageObject(WebDriver driver, WebDriverWait waiter, Actions actions) {
+        super(driver, waiter, actions);
     }
 
     @FindBy(xpath = "//span[text()='Телефоны']")
@@ -33,12 +36,13 @@ public class LunabarPageObject extends BasePage {
 
     private By workHoursElements = By.xpath("//div[contains(@class, 'ContactsPopupOpening__main')]");
 
+
     public String getCurrentAddress() {
         return getElementText(addressElement);
     }
 
     public LunabarPageObject clickPhoneNumbersButton() {
-        clickElement(phoneNumbersButton);
+        clickElement(phoneNumbersButton, this);
         return this;
     }
     public ArrayList<String> getAllPhoneNumbers() {
@@ -50,7 +54,7 @@ public class LunabarPageObject extends BasePage {
     }
 
     public LunabarPageObject clickOnCloseButton() {
-        clickElement(closeButton);
+        clickElement(closeButton, this);
         return this;
     }
 
@@ -63,7 +67,7 @@ public class LunabarPageObject extends BasePage {
     }
 
     public LunabarPageObject clickOnWorkHoursButton() {
-        clickElement(workTimeButton);
+        clickElement(workTimeButton, this);
         return this;
     }
 }

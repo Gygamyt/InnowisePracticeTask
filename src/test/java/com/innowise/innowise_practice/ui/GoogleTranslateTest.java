@@ -8,11 +8,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 
-import static com.innowise.innowise_practice.ui.driver.Driver.getDriver;
+import static com.innowise.innowise_practice.ui.driver.Driver.*;
 
 public class GoogleTranslateTest extends BaseTest {
 
-    private final GooglePageObject googlePageObject = new GooglePageObject(getDriver());
+    private final GooglePageObject googlePageObject = new GooglePageObject(getDriver(), getWaiter(), getActions());
 
     private static final String textForTranslate = "Test";
 

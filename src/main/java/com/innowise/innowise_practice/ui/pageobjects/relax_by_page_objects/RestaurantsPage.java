@@ -3,13 +3,16 @@ package com.innowise.innowise_practice.ui.pageobjects.relax_by_page_objects;
 import com.innowise.innowise_practice.ui.driver.Driver;
 import com.innowise.innowise_practice.ui.pageobjects.BasePage;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
 public class RestaurantsPage extends BasePage {
-    public RestaurantsPage(WebDriver driver) {
-        super(driver);
+
+    public RestaurantsPage(WebDriver driver, WebDriverWait waiter, Actions actions) {
+        super(driver, waiter, actions);
     }
 
     @FindBy(xpath = "//span[text()='Фильтры']")
@@ -39,7 +42,7 @@ public class RestaurantsPage extends BasePage {
     private WebElement chooseTakeAwayVariant;
 
     public RestaurantsPage openFilters() {
-        clickElement(filtersButton);
+        clickElement(filtersButton, this);
         return this;
     }
 

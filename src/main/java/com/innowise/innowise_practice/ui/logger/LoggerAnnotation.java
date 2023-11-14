@@ -1,4 +1,4 @@
-package com.innowise.innowise_practice.ui.utils;
+package com.innowise.innowise_practice.ui.logger;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

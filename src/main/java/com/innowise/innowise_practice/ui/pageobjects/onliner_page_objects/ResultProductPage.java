@@ -6,7 +6,9 @@ import com.innowise.innowise_practice.ui.utils.NumbersParser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Comparator;
 import java.util.HashMap;
@@ -14,9 +16,11 @@ import java.util.List;
 import java.util.Map;
 
 public class ResultProductPage extends BasePage {
-    public ResultProductPage(WebDriver driver) {
-        super(driver);
+
+    public ResultProductPage(WebDriver driver, WebDriverWait waiter, Actions actions) {
+        super(driver, waiter, actions);
     }
+
 
     @FindBy(xpath = "//h1[contains(@class, \"catalog-masthead__title\")]")
     private WebElement productResultTittle;
@@ -53,7 +57,7 @@ public class ResultProductPage extends BasePage {
     }
 
     public ResultProductPage addProductWithLowestPriceToCart() {
-        clickElement(selectOfferWithLowestPrice());
+        clickElement(selectOfferWithLowestPrice(), this);
         return this;
     }
 
@@ -70,7 +74,7 @@ public class ResultProductPage extends BasePage {
     }
 
     public CartPage clickOnGoToCartButton() {
-        clickElement(goToCartButton);
-        return new CartPage(this.driver);
+        clickElement(goToCartButton, this);
+        return new CartPage(this.driver, this.waiter, this.actions);
     }
 }

@@ -5,20 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f69f4030-50b3-4bbf-9f69-682c0bc705a8" name="Changes" comment="ui tests rewritten">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/utils/LoggerAnnotation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/utils/LoggingAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/utils/Reflector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/driver/ElementFinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/logger/NameForLogger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/CustomLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/utils/CustomLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/PropReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/utils/PropReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/api/endpoints/OnlinerEndpoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/api/endpoints/OnlinerEndpoints.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/api/models/SushiPageModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/api/models/SushiPageModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/configs/TestConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/driver/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/driver/Driver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/api/vk/VKTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/api/vk/VKTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/amazon_page_objects/AmazonCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/amazon_page_objects/AmazonCartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/amazon_page_objects/AmazonHeader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/amazon_page_objects/AmazonHeader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/amazon_page_objects/AmazonLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/amazon_page_objects/AmazonLoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/amazon_page_objects/AmazonMainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/amazon_page_objects/AmazonMainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/amazon_page_objects/AmazonProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/amazon_page_objects/AmazonProductPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/amazon_page_objects/AmazonProductsSearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/amazon_page_objects/AmazonProductsSearchPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/google_page_objects/GooglePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/google_page_objects/GooglePageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/onliner_page_objects/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/onliner_page_objects/CartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/onliner_page_objects/MainPageOnlinerObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/onliner_page_objects/MainPageOnlinerObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/onliner_page_objects/ResultProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/onliner_page_objects/ResultProductPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/relax_by_page_objects/LunabarPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/relax_by_page_objects/LunabarPageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/relax_by_page_objects/RelaxHeader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/relax_by_page_objects/RelaxHeader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/relax_by_page_objects/RestaurantsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/pageobjects/relax_by_page_objects/RestaurantsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/utils/CustomLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/logger/CustomLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/utils/LoggerAnnotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/logger/LoggerAnnotation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/utils/LoggingAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/innowise/innowise_practice/ui/logger/LoggingAspect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/AmazonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/AmazonTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/GoogleTranslateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/GoogleTranslateTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/OnlinerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/OnlinerTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/RelaxTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/RelaxTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/utils/CustomTestWatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/innowise/innowise_practice/ui/utils/CustomTestWatcher.java" afterDir="false" />
@@ -62,8 +73,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -74,7 +85,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="2VNOmRLNoW2og1iaFeSpieF6Wvu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -124,7 +134,7 @@
       <command value="./gradlew clean test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.InnowisePracticeTask [clean test]">
+  <component name="RunManager" selected="Gradle.GoogleTranslateTest.googleTranslateTest">
     <configuration name="AmazonTest.loginAmazonTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -173,7 +183,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="InnowisePracticeTask [allureServe]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GoogleTranslateTest.googleTranslateTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -184,15 +194,17 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="allureServe" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.innowise.innowise_practice.ui.GoogleTranslateTest.googleTranslateTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
+      <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="InnowisePracticeTask [clean test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -244,11 +256,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.GoogleTranslateTest.googleTranslateTest" />
         <item itemvalue="Gradle.InnowisePracticeTask [clean test]" />
         <item itemvalue="Gradle.GoogleTranslateTest" />
         <item itemvalue="Gradle.AmazonTest.loginAmazonTest" />
         <item itemvalue="Gradle.VKTest.test" />
-        <item itemvalue="Gradle.InnowisePracticeTask [allureServe]" />
       </list>
     </recent_temporary>
   </component>
@@ -280,6 +292,7 @@
       <workItem from="1699527675776" duration="39000" />
       <workItem from="1699527724615" duration="860000" />
       <workItem from="1699528621312" duration="535000" />
+      <workItem from="1699863164534" duration="12806000" />
     </task>
     <task id="LOCAL-00001" summary="versions selenium">
       <created>1699518086804</created>

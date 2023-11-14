@@ -1,27 +1,22 @@
 package com.innowise.innowise_practice.ui;
 
-import com.innowise.innowise_practice.ui.driver.Driver;
-import com.innowise.innowise_practice.ui.pageobjects.relax_by_page_objects.LunabarPageObject;
 import com.innowise.innowise_practice.ui.pageobjects.relax_by_page_objects.RelaxHeader;
 import com.innowise.innowise_practice.ui.utils.LinksForTestsEnum;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.innowise.innowise_practice.ui.driver.Driver.openLink;
+import static com.innowise.innowise_practice.ui.driver.Driver.*;
 
 @Disabled
 public class RelaxTests extends BaseTest {
 
-    private final WebDriver driver = Driver.getDriver();
-
-    private final RelaxHeader relaxHeader = new RelaxHeader(driver);
+    private final RelaxHeader relaxHeader = new RelaxHeader(getDriver(), getWaiter(), getActions());
 
     @Test
     public void lunabarTest() {

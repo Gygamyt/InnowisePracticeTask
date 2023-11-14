@@ -4,12 +4,14 @@ import com.innowise.innowise_practice.ui.driver.Driver;
 import com.innowise.innowise_practice.ui.pageobjects.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AmazonHeader extends BasePage {
-    public AmazonHeader(WebDriver driver) {
-        super(driver);
+    public AmazonHeader(WebDriver driver, WebDriverWait waiter, Actions actions) {
+        super(driver, waiter, actions);
     }
 
     @FindBy(id = "nav-link-accountList")
@@ -30,13 +32,15 @@ public class AmazonHeader extends BasePage {
     @FindBy(xpath = "//div[@id=\"NATC_SMART_WAGON_CONF_MSG_SUCCESS\"]//i")
     private WebElement greenIconElement;
 
+
+
     public AmazonLoginPage hoverAccountsAndListsAndClickLogin() {
         actions
                 .moveToElement(AccountAndListButton)
                 .perform();
         waiter.until(ExpectedConditions.visibilityOf(signInButton));
-        clickElement(signInButton);
-        return new AmazonLoginPage(this.driver);
+        clickElement(signInButton, this);
+        return new AmazonLoginPage(this.driver, this.waiter, this.actions);
     }
 
     public boolean isQuantityOfItemsIsOne() {
@@ -48,7 +52,7 @@ public class AmazonHeader extends BasePage {
                 .moveToElement(cartButton)
                 .click()
                 .perform();
-        return new AmazonCartPage(this.driver);
+        return new AmazonCartPage(this.driver, this.waiter, this.actions);
     }
 
     public boolean isAddedToCartTextAppears() {

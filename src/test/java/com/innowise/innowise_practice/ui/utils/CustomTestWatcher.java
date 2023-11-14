@@ -1,6 +1,7 @@
 package com.innowise.innowise_practice.ui.utils;
 
 import com.innowise.innowise_practice.ui.driver.Driver;
+import com.innowise.innowise_practice.ui.logger.CustomLogger;
 import io.qameta.allure.Attachment;
 import org.junit.jupiter.api.extension.*;
 import org.openqa.selenium.OutputType;

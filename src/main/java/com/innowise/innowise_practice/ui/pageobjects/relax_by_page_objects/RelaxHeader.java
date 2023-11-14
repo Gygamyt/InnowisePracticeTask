@@ -4,11 +4,14 @@ import com.innowise.innowise_practice.ui.driver.Driver;
 import com.innowise.innowise_practice.ui.pageobjects.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class RelaxHeader extends BasePage {
-    public RelaxHeader(WebDriver driver) {
-        super(driver);
+
+    public RelaxHeader(WebDriver driver, WebDriverWait waiter, Actions actions) {
+        super(driver, waiter, actions);
     }
 
     @FindBy(id = "search_open")
@@ -26,22 +29,23 @@ public class RelaxHeader extends BasePage {
     @FindBy(xpath = "//div[contains(@class, \"Gallery__list\")]//div[@title=\"Афиша, кино\"]")
     private WebElement afishaButton;
 
+
     public LunabarPageObject openLunabarPage() {
         moveToElementAndClick(searchBarField);
         actions
                 .sendKeys("Luna")
                 .perform();
-        clickElement(lunabarResult);
-        return new LunabarPageObject(this.driver);
+        clickElement(lunabarResult, this);
+        return new LunabarPageObject(this.driver, this.waiter, this.actions);
     }
 
     public RelaxHeader clickFoodButton() {
-        clickElement(foodButton);
+        clickElement(foodButton, this);
         return this;
     }
 
     public RestaurantsPage clickRestaurantButton() {
-        clickElement(restaurantsButton);
-        return new RestaurantsPage(this.driver);
+        clickElement(restaurantsButton, this);
+        return new RestaurantsPage(this.driver, this.waiter, this.actions);
     }
 }

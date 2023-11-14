@@ -3,11 +3,13 @@ package com.innowise.innowise_practice.ui.pageobjects.amazon_page_objects;
 import com.innowise.innowise_practice.ui.pageobjects.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AmazonCartPage extends BasePage {
-    public AmazonCartPage(WebDriver driver) {
-        super(driver);
+    public AmazonCartPage(WebDriver driver, WebDriverWait waiter, Actions actions) {
+        super(driver, waiter, actions);
     }
 
     @FindBy(xpath = "//div[@class=\"a-row\"]//h1")
