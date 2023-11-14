@@ -10,7 +10,6 @@ import org.junit.jupiter.api.Test;
 import static com.innowise.innowise_practice.ui.driver.Driver.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
 @Disabled
 public class OnlinerTests extends BaseTest {
 

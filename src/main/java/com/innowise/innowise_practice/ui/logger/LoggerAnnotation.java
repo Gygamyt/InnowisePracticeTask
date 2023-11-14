@@ -8,8 +8,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface LoggerAnnotation {
-    String action() default "action with";
-
-    String element();
+    String action() default "default";
 }
 

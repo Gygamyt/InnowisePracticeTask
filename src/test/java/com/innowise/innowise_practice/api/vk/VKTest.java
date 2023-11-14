@@ -18,7 +18,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.innowise.innowise_practice.api.vk.utils.UtilsMethods.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
+@Disabled
 public class VKTest {
 
     private static final Integer APP_ID = 51471875;

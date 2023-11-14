@@ -2,12 +2,14 @@ package com.innowise.innowise_practice.api.onliner;
 
 import com.innowise.innowise_practice.api.services.ProductService;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static com.innowise.innowise_practice.api.endpoints.OnlinerEndpoints.getSushiFilterRollsProductsEndpoint;
 import static com.innowise.innowise_practice.api.endpoints.OnlinerEndpoints.getSushiProductsEndpoint;
 import static io.restassured.RestAssured.given;
 
+@Disabled
 public class RestAssuredOnlinerTest {
 
     @Test

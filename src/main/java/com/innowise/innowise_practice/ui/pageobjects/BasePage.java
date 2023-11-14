@@ -1,6 +1,7 @@
 package com.innowise.innowise_practice.ui.pageobjects;
 
 import com.innowise.innowise_practice.ui.logger.CustomLogger;
+import com.innowise.innowise_practice.ui.logger.LoggerAnnotation;
 import com.innowise.innowise_practice.ui.logger.NameForLogger;
 import com.innowise.innowise_practice.ui.utils.Reflector;
 import com.vk.api.sdk.objects.users.Fields;
@@ -44,30 +45,13 @@ public abstract class BasePage implements CustomLogger, Reflector {
         return this.waiter.until(ExpectedConditions.visibilityOf(webElement)).getText();
     }
 
+    @LoggerAnnotation(action = "clicked")
     public void clickElement(WebElement element, BasePage page) {
-        try {
-//            Field field = page.getClass().getDeclaredField(element.);
-
-            Field[] fields = page.getClass().getDeclaredFields();
-
-            logger().info(Arrays.toString(fields));
-            for (Field f : fields) {
-                try {
-                    System.out.println(f.getType().getName());
-                    System.out.println(f.getAnnotation(NameForLogger.class).name());
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         waitUntilClickable(element);
         element.click();
-        staticLogger.info("'{}' is clicked", element);
     }
 
+    @LoggerAnnotation(action = "moved and clicked")
     public void moveToElementAndClick(WebElement element) {
         waitUntilClickable(element);
         actions
@@ -102,10 +86,6 @@ public abstract class BasePage implements CustomLogger, Reflector {
         this.waiter.until(ExpectedConditions.visibilityOf(element));
     }
 
-//    public void waitUntilElementClickable(WebElement element) {
-//        this.waiter.until(ExpectedConditions.elementToBeClickable(element));
-//    }
-
     public List<WebElement> getElementsWithBy(By by) {
         return getDriver().findElements(by);
     }
@@ -114,12 +94,4 @@ public abstract class BasePage implements CustomLogger, Reflector {
         return getDriver().getCurrentUrl();
     }
 
-
-    public WebElement findElementById(By by) {
-        return this.driver.findElement(by);
-    }
-
-    public WebElement findElementByXpath(String xpath) {
-        return getDriver().findElement(By.xpath(xpath));
-    }
 }

@@ -1,0 +1,5 @@
+<aspectj>
+    <aspects>
+        <aspect name="com.innowise.innowise_practice.ui.logger.LoggingAspect"/>
+    </aspects>
+</aspectj>

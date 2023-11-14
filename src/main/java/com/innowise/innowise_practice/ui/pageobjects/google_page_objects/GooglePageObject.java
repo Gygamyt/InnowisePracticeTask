@@ -16,35 +16,25 @@ public class GooglePageObject extends BasePage {
         super(driver, waiter, actions);
     }
 
-//    private static final By TEXT_FIELD_PATTERN = By.xpath("//span[contains(@lang, '%s')]"); //надо доделать
-
     @FindBy(id = "i12")
-    @NameForLogger(name = "leftEnglishButton")
+    @NameForLogger(name = "left English Button")
     private WebElement leftEnglishButton;
-//           = findElementById(By.id("i12"));
 
     @FindBy(xpath = "//button[@aria-label=\"More target languages\"]")
     @NameForLogger(name = "expand all right side")
     private WebElement expandAllLanguagesButtonRight;
-//            = findElementByXpath("//button[@aria-label=\"More target languages\"]");
 
     @FindBy(xpath = "(//div[@data-language-code=\"ru\"])[2]")
     @NameForLogger(name = "right side russian button")
     private WebElement russianLanguageRightButtonWhenExpanded;
-//            =
-//            findElementByXpath("(//div[@data-language-code=\"ru\"])[2]");
 
     @FindBy(xpath = "//span[@lang=\"en\"]")
     @NameForLogger(name = "field for text for translate")
     private WebElement fieldForEnglishText;
-//            =
-//            findElementByXpath("//span[@lang=\"en\"]");
 
     @FindBy(xpath = "//span[@lang=\"ru\"]")
     @NameForLogger(name = "result of translate")
     private WebElement resultOfTranslateField;
-//            =
-//            findElementByXpath("//span[@lang=\"ru\"]");
 
 
     public boolean isLeftEnglishButtonVisibleCheck() {

@@ -13,7 +13,6 @@ import java.util.List;
 
 import static com.innowise.innowise_practice.ui.driver.Driver.*;
 
-@Disabled
 public class RelaxTests extends BaseTest {
 
     private final RelaxHeader relaxHeader = new RelaxHeader(getDriver(), getWaiter(), getActions());

@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 
 import static com.innowise.innowise_practice.ui.driver.Driver.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
 @Disabled
 public class AmazonTest extends BaseTest {
 
