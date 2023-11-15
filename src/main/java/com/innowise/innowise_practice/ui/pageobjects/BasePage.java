@@ -5,6 +5,7 @@ import com.innowise.innowise_practice.ui.logger.LoggerAnnotation;
 import com.innowise.innowise_practice.ui.logger.NameForLogger;
 import com.innowise.innowise_practice.ui.utils.Reflector;
 import com.vk.api.sdk.objects.users.Fields;
+import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -65,6 +66,7 @@ public abstract class BasePage implements CustomLogger, Reflector {
         element.sendKeys(text);
     }
 
+    @LoggerAnnotation(action = "waited until element clickable")
     private void waitUntilClickable(WebElement element) {
         this.waiter.until(ExpectedConditions.elementToBeClickable(element));
     }
@@ -74,22 +76,28 @@ public abstract class BasePage implements CustomLogger, Reflector {
         return webElementArrayList = getDriver().findElements(By.xpath(xpath));
     }
 
+    @NotNull
+    @org.jetbrains.annotations.Contract("_, _ -> new")
     public static By formatStringForXPath(String pattern, String text) {
         return By.xpath(String.format(pattern, text));
     }
 
+    @LoggerAnnotation(action = "waited until element visible, using 'By'")
     public void waitUntilElementVisible(By by) {
         this.waiter.until(ExpectedConditions.visibilityOf(getDriver().findElement(by)));
     }
 
+    @LoggerAnnotation(action = "waited until element visible")
     public void waitUntilElementVisible(WebElement element) {
         this.waiter.until(ExpectedConditions.visibilityOf(element));
     }
 
+    @LoggerAnnotation(action = "got elements, using 'By'")
     public List<WebElement> getElementsWithBy(By by) {
         return getDriver().findElements(by);
     }
 
+    @LoggerAnnotation(action = "page is opened")
     public String getPageUrl() {
         return getDriver().getCurrentUrl();
     }
