@@ -1,6 +1,5 @@
-package com.innowise.innowise_practice.ui.pageobjects.relax_by_page_objects;
+package com.innowise.innowise_practice.ui.pageobjects.relax;
 
-import com.innowise.innowise_practice.ui.driver.Driver;
 import com.innowise.innowise_practice.ui.pageobjects.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

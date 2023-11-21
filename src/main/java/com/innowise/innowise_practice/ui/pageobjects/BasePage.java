@@ -2,10 +2,8 @@ package com.innowise.innowise_practice.ui.pageobjects;
 
 import com.innowise.innowise_practice.ui.logger.CustomLogger;
 import com.innowise.innowise_practice.ui.logger.LoggerAnnotation;
-import com.innowise.innowise_practice.ui.logger.NameForLogger;
 import com.innowise.innowise_practice.ui.utils.Reflector;
-import com.vk.api.sdk.objects.users.Fields;
-import org.jetbrains.annotations.NotNull;
+import org.aspectj.lang.reflect.MethodSignature;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,16 +12,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static com.innowise.innowise_practice.ui.driver.Driver.getDriver;
 
 public abstract class BasePage implements CustomLogger, Reflector {
-
 
     public WebDriver driver;
 
@@ -59,7 +52,6 @@ public abstract class BasePage implements CustomLogger, Reflector {
                 .moveToElement(element)
                 .click(element)
                 .perform();
-        staticLogger.info("moved to '{}' and clicked", element);
     }
 
     public static void enterText(WebElement element, String text) {
@@ -76,8 +68,6 @@ public abstract class BasePage implements CustomLogger, Reflector {
         return webElementArrayList = getDriver().findElements(By.xpath(xpath));
     }
 
-    @NotNull
-    @org.jetbrains.annotations.Contract("_, _ -> new")
     public static By formatStringForXPath(String pattern, String text) {
         return By.xpath(String.format(pattern, text));
     }

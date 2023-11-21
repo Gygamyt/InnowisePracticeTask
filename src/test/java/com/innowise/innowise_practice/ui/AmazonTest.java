@@ -1,6 +1,6 @@
 package com.innowise.innowise_practice.ui;
 
-import com.innowise.innowise_practice.ui.pageobjects.amazon_page_objects.AmazonHeader;
+import com.innowise.innowise_practice.ui.pageobjects.amazon.AmazonHeader;
 import com.innowise.innowise_practice.ui.utils.LinksForTestsEnum;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

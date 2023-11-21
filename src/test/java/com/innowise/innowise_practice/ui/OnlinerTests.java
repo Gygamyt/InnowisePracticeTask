@@ -1,6 +1,6 @@
 package com.innowise.innowise_practice.ui;
 
-import com.innowise.innowise_practice.ui.pageobjects.onliner_page_objects.MainPageOnlinerObject;
+import com.innowise.innowise_practice.ui.pageobjects.onliner.MainPageOnlinerObject;
 import com.innowise.innowise_practice.ui.utils.LinksForTestsEnum;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

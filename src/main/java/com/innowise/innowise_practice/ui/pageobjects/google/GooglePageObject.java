@@ -1,8 +1,7 @@
-package com.innowise.innowise_practice.ui.pageobjects.google_page_objects;
+package com.innowise.innowise_practice.ui.pageobjects.google;
 
 import com.innowise.innowise_practice.ui.logger.NameForLogger;
 import com.innowise.innowise_practice.ui.pageobjects.BasePage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -15,10 +14,6 @@ public class GooglePageObject extends BasePage {
     public GooglePageObject(WebDriver driver, WebDriverWait waiter, Actions actions) {
         super(driver, waiter, actions);
     }
-
-    @FindBy(id = "i12")
-    @NameForLogger(name = "left English Button")
-    private WebElement leftEnglishButton;
 
     @FindBy(xpath = "//button[@aria-label=\"More target languages\"]")
     @NameForLogger(name = "expand all right side")
@@ -35,6 +30,10 @@ public class GooglePageObject extends BasePage {
     @FindBy(xpath = "//span[@lang=\"ru\"]")
     @NameForLogger(name = "result of translate")
     private WebElement resultOfTranslateField;
+
+    @FindBy(id = "i12")
+//    @NameForLogger(name = "left English Button") //for example
+    private WebElement leftEnglishButton;
 
 
     public boolean isLeftEnglishButtonVisibleCheck() {

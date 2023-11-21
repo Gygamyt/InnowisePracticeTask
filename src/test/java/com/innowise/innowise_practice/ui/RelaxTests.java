@@ -1,10 +1,9 @@
 package com.innowise.innowise_practice.ui;
 
-import com.innowise.innowise_practice.ui.pageobjects.relax_by_page_objects.RelaxHeader;
+import com.innowise.innowise_practice.ui.pageobjects.relax.RelaxHeader;
 import com.innowise.innowise_practice.ui.utils.LinksForTestsEnum;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebElement;
 

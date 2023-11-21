@@ -1,4 +1,4 @@
-package com.innowise.innowise_practice.ui.pageobjects.onliner_page_objects;
+package com.innowise.innowise_practice.ui.pageobjects.onliner;
 
 import com.innowise.innowise_practice.ui.pageobjects.BasePage;
 import com.innowise.innowise_practice.ui.driver.Driver;

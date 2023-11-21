@@ -1,4 +1,4 @@
-package com.innowise.innowise_practice.ui.pageobjects.amazon_page_objects;
+package com.innowise.innowise_practice.ui.pageobjects.amazon;
 
 import com.innowise.innowise_practice.ui.driver.Driver;
 import com.innowise.innowise_practice.ui.pageobjects.BasePage;

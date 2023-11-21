@@ -4,7 +4,7 @@ plugins {
     id 'io.qameta.allure' version '2.11.2'
     id "io.qameta.allure-adapter" version "2.11.2"
     id 'idea'
-    id "io.freefair.aspectj" version "8.1.0"
+    id "io.freefair.aspectj.post-compile-weaving" version "6.4.1"
 }
 
 group 'com.innowise'
@@ -29,17 +29,12 @@ tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
 
-//sourceSets.main.aspectj.srcDir "src/main/java"
-//sourceSets.main.java.srcDirs = files()
 
 dependencies {
     implementation("org.seleniumhq.selenium:selenium-java:${seleniumVersion}")
     implementation("org.seleniumhq.selenium:selenium-devtools-v116:${seleniumVersion}")
 
-    implementation("org.springframework:spring-aspects:6.0.12")
-
     implementation('io.github.bonigarcia:webdrivermanager:5.3.1')
-    implementation 'org.jetbrains:annotations:24.0.0'
 
     testImplementation('org.assertj:assertj-core:3.24.2')
 
@@ -59,13 +54,14 @@ dependencies {
     implementation("io.rest-assured:rest-assured:5.3.2")
 
     implementation("com.fasterxml.jackson.core:jackson-core:2.15.2")
+//    implementation("com.fasterxml.jackson.core:jackson-annotations:2.16.0")
 
     compileOnly("org.projectlombok:lombok:1.18.30")
 
-    runtimeOnly("org.aspectj:aspectjrt:1.9.20.1")
-    runtimeOnly("org.aspectj:aspectjweaver:1.9.20.1")
-
-    implementation("io.freefair.gradle:aspectj-plugin:8.1.0")
+    implementation("org.aspectj:aspectjrt:1.9.20.1")
+//    implementation("org.aspectj:aspectjweaver:1.9.20.1")
+//
+//    implementation("io.freefair.gradle:aspectj-plugin:8.1.0")
 
 }
 

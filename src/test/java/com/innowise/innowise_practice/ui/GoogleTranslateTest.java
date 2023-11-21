@@ -1,18 +1,17 @@
 package com.innowise.innowise_practice.ui;
 
 import com.innowise.innowise_practice.ui.driver.Driver;
-import com.innowise.innowise_practice.ui.pageobjects.google_page_objects.GooglePageObject;
+import com.innowise.innowise_practice.ui.pageobjects.google.GooglePageObject;
 import com.innowise.innowise_practice.ui.utils.LinksForTestsEnum;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
 
 import static com.innowise.innowise_practice.ui.driver.Driver.*;
 
 public class GoogleTranslateTest extends BaseTest {
 
-    private final GooglePageObject googlePageObject = new GooglePageObject(getDriver(), getWaiter(), getActions());
+    GooglePageObject googlePageObject = new GooglePageObject(getDriver(), getWaiter(), getActions());
 
     private static final String textForTranslate = "Test";
 
