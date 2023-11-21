@@ -3,6 +3,7 @@ package com.innowise.innowise_practice.ui.logger;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.FieldSignature;
@@ -14,20 +15,21 @@ import java.lang.reflect.Method;
 @Aspect
 public class LoggingAspect implements CustomLogger {
 
-    @Around("@annotation(LoggerAnnotation) && execution(* *(..))")
-    public Object getMethodName(final ProceedingJoinPoint proceedingJoinPoint) {
-        staticLogger.info(getActionName(proceedingJoinPoint));
-        try {
-            return proceedingJoinPoint.proceed();
-        } catch (Throwable e) {
-            staticLogger.error("reflexia fidanyla");
-            throw new RuntimeException(e);
-        }
+    private String nameSaver = null;
+
+    @After("@annotation(LoggerAnnotation) && execution(* *(..))")
+    public void getMethodName(JoinPoint joinPoint) {
+        if (nameSaver != null) {
+            staticLogger.info(" " + getActionName(joinPoint) + nameSaver);
+        } else staticLogger.info(getActionName(joinPoint) + " null name");
+
+
+        nameSaver = null;
     }
 
-    @Around("@annotation(org.openqa.selenium.support.FindBy)")
-    public Object forceSetNameIfNotSetOfElementAndLogIt(ProceedingJoinPoint proceedingJoinPoint) {
-        FieldSignature fieldSignature = (FieldSignature) proceedingJoinPoint.getSignature();
+    @After("@annotation(org.openqa.selenium.support.FindBy)")
+    public void forceSetNameIfNotSetOfElementAndLogIt(JoinPoint joinPoint) {
+        FieldSignature fieldSignature = (FieldSignature) joinPoint.getSignature();
         Field field = fieldSignature.getField();
 
         StringBuilder stringBuilder = new StringBuilder();
@@ -38,27 +40,11 @@ public class LoggingAspect implements CustomLogger {
             } else stringBuilder.append(field.getAnnotation(NameForLogger.class).name());
         } else stringBuilder.append(field.getName()).append(" element");
 
-        staticLogger.info(stringBuilder);
+//        staticLogger.info(stringBuilder);
 
-        try {
-            return proceedingJoinPoint.proceed();
-        } catch (Throwable e) {
-            staticLogger.error("reflexia fidanyla");
-            throw new RuntimeException(e);
-        }
-
+        nameSaver = stringBuilder.toString();
     }
 
-//    @Around("@annotation(NameForLogger)")
-    public Object getElementName(ProceedingJoinPoint proceedingJoinPoint) {
-        staticLogger.info(getFieldName(proceedingJoinPoint));
-        try {
-            return proceedingJoinPoint.proceed();
-        } catch (Throwable e) {
-            staticLogger.error("reflexia fidanyla");
-            throw new RuntimeException(e);
-        }
-    }
 
     private String getFieldName(JoinPoint joinPoint) {
         FieldSignature fieldSignature = (FieldSignature) joinPoint.getSignature();
