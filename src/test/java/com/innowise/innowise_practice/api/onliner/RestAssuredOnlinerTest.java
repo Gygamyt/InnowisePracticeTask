@@ -9,7 +9,7 @@ import static com.innowise.innowise_practice.api.endpoints.OnlinerEndpoints.getS
 import static com.innowise.innowise_practice.api.endpoints.OnlinerEndpoints.getSushiProductsEndpoint;
 import static io.restassured.RestAssured.given;
 
-@Disabled
+
 public class RestAssuredOnlinerTest {
 
     @Test
@@ -38,6 +38,6 @@ public class RestAssuredOnlinerTest {
     public void checkNamePrefixTest() {
         new ProductService()
                 .getSushiNamePrefixesList()
-                .forEach(s -> Assertions.assertEquals("Роллы", s.getNamePrefix()));
+                .forEach(prefixes -> Assertions.assertEquals("Роллы", prefixes.getNamePrefix()));
     }
 }

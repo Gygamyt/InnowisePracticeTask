@@ -1,24 +1,26 @@
 package com.innowise.innowise_practice.api.services;
 
 import com.google.common.collect.ImmutableMap;
-import com.innowise.innowise_practice.api.endpoints.OnlinerEndpoints;
 import com.innowise.innowise_practice.api.models.SushiPageModel;
-import com.innowise.innowise_practice.api.utils.GetRequestUtils;
 
 import java.util.List;
 import java.util.Map;
+
+import static com.innowise.innowise_practice.api.endpoints.OnlinerEndpoints.getSushiFilterRollsProductsEndpoint;
+import static com.innowise.innowise_practice.api.endpoints.OnlinerEndpoints.getSushiProductsEndpoint;
+import static com.innowise.innowise_practice.api.utils.GetRequestUtils.makeGetRequestAndGetBody;
 
 
 public class ProductService {
 
     public List<SushiPageModel> getSushiProductsList() {
-        return GetRequestUtils.makeGetRequestAndGetBody(OnlinerEndpoints.getSushiProductsEndpoint(), null, null)
+        return makeGetRequestAndGetBody(getSushiProductsEndpoint(), configureHeaders(), null)
                 .jsonPath()
                 .getList("products", SushiPageModel.class);
     }
 
     public List<SushiPageModel> getSushiNamePrefixesList() {
-        return GetRequestUtils.makeGetRequestAndGetBody(OnlinerEndpoints.getSushiFilterRollsProductsEndpoint(), null, null)
+        return makeGetRequestAndGetBody(getSushiFilterRollsProductsEndpoint(), configureHeaders(), null)
                 .jsonPath()
                 .getList("products", SushiPageModel.class);
     }

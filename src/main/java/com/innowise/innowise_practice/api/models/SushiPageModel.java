@@ -2,11 +2,7 @@ package com.innowise.innowise_practice.api.models;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.Getter;
-import lombok.Setter;
 
-//@Getter
-//@Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SushiPageModel {
     private int id;
@@ -20,24 +16,16 @@ public class SushiPageModel {
         this.full_name = full_name;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getKey() {
-        return key;
+    public String getName() {
+        return name;
     }
 
     public void setKey(String key) {
         this.key = key;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public void setId(int id) {
