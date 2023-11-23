@@ -54,15 +54,10 @@ dependencies {
     implementation("io.rest-assured:rest-assured:5.3.2")
 
     implementation("com.fasterxml.jackson.core:jackson-core:2.15.2")
-//    implementation("com.fasterxml.jackson.core:jackson-annotations:2.16.0")
 
     compileOnly("org.projectlombok:lombok:1.18.30")
 
     implementation("org.aspectj:aspectjrt:1.9.20.1")
-//    implementation("org.aspectj:aspectjweaver:1.9.20.1")
-//
-//    implementation("io.freefair.gradle:aspectj-plugin:8.1.0")
-
 }
 
 test {
