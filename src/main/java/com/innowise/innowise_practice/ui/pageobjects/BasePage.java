@@ -1,9 +1,8 @@
 package com.innowise.innowise_practice.ui.pageobjects;
 
 import com.innowise.innowise_practice.ui.logger.CustomLogger;
-import com.innowise.innowise_practice.ui.logger.LoggerAnnotation;
+import com.innowise.innowise_practice.ui.annotations.LoggerAnnotation;
 import com.innowise.innowise_practice.ui.utils.Reflector;
-import org.aspectj.lang.reflect.MethodSignature;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

@@ -1,6 +1,6 @@
 package com.innowise.innowise_practice.ui.pageobjects.google;
 
-import com.innowise.innowise_practice.ui.logger.NameForLogger;
+import com.innowise.innowise_practice.ui.annotations.NameForLogger;
 import com.innowise.innowise_practice.ui.pageobjects.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

@@ -1,6 +1,5 @@
 package com.innowise.innowise_practice.ui.pageobjects.relax;
 
-import com.innowise.innowise_practice.ui.logger.NameForLogger;
 import com.innowise.innowise_practice.ui.pageobjects.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

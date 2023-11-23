@@ -1,9 +1,10 @@
 package com.innowise.innowise_practice.ui.logger;
 
 
+import com.innowise.innowise_practice.ui.annotations.LoggerAnnotation;
+import com.innowise.innowise_practice.ui.annotations.NameForLogger;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.FieldSignature;
@@ -17,18 +18,22 @@ public class LoggingAspect implements CustomLogger {
 
     private String nameSaver = null;
 
-    @After("@annotation(LoggerAnnotation) && execution(* *(..))")
-    public void getMethodName(JoinPoint joinPoint) {
+    private String cashedNameSaver = null;
+
+
+    @Around("@annotation(com.innowise.innowise_practice.ui.annotations.LoggerAnnotation) && execution(* *(..))")
+    public Object getMethodName(ProceedingJoinPoint joinPoint) throws Throwable {
         if (nameSaver != null) {
-            staticLogger.info(" " + getActionName(joinPoint) + nameSaver);
+            staticLogger.info(getActionName(joinPoint) + " " + nameSaver);
         } else staticLogger.info(getActionName(joinPoint) + " null name");
 
-
         nameSaver = null;
+
+        return joinPoint.proceed();
     }
 
-    @After("@annotation(org.openqa.selenium.support.FindBy)")
-    public void forceSetNameIfNotSetOfElementAndLogIt(JoinPoint joinPoint) {
+    @Around("@annotation(org.openqa.selenium.support.FindBy)")
+    public Object forceSetNameIfNotSetOfElementAndLogIt(ProceedingJoinPoint joinPoint) throws Throwable {
         FieldSignature fieldSignature = (FieldSignature) joinPoint.getSignature();
         Field field = fieldSignature.getField();
 
@@ -40,9 +45,9 @@ public class LoggingAspect implements CustomLogger {
             } else stringBuilder.append(field.getAnnotation(NameForLogger.class).name());
         } else stringBuilder.append(field.getName()).append(" element");
 
-//        staticLogger.info(stringBuilder);
-
         nameSaver = stringBuilder.toString();
+
+        return joinPoint.proceed();
     }
 
 
