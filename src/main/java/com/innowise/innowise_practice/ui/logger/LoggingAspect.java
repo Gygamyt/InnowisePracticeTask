@@ -25,7 +25,8 @@ public class LoggingAspect implements CustomLogger {
     public Object getMethodName(ProceedingJoinPoint joinPoint) throws Throwable {
         if (nameSaver != null) {
             staticLogger.info(getActionName(joinPoint) + " " + nameSaver);
-        } else staticLogger.info(getActionName(joinPoint) + " null name");
+            cashedNameSaver = nameSaver;
+        } else staticLogger.info(getActionName(joinPoint) + " " + cashedNameSaver);
 
         nameSaver = null;
 
@@ -40,7 +41,7 @@ public class LoggingAspect implements CustomLogger {
         StringBuilder stringBuilder = new StringBuilder();
 
         if (field.isAnnotationPresent(NameForLogger.class)) {
-            if (field.getAnnotation(NameForLogger.class).name().matches("")){
+            if (field.getAnnotation(NameForLogger.class).name().matches("")) {
                 stringBuilder.append(field.getName());
             } else stringBuilder.append(field.getAnnotation(NameForLogger.class).name());
         } else stringBuilder.append(field.getName()).append(" element");
